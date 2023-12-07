@@ -8,5 +8,10 @@ namespace CoffeeStoreApp
 {
     class Data
     {
+        private static QL_CAFEEntities db = new QL_CAFEEntities();
+        public Data()
+        {
+
+        }
     }
 }

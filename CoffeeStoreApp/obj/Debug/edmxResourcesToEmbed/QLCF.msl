@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QL_CAFEModelStoreContainer" CdmEntityContainer="QL_CAFEEntities">
+    <EntitySetMapping Name="BANs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.BAN">
+        <MappingFragment StoreEntitySet="BAN">
+          <ScalarProperty Name="maban" ColumnName="maban" />
+          <ScalarProperty Name="makv" ColumnName="makv" />
+          <ScalarProperty Name="tenban" ColumnName="tenban" />
+          <ScalarProperty Name="thuoctinh" ColumnName="thuoctinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CALAMVIECs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.CALAMVIEC">
+        <MappingFragment StoreEntitySet="CALAMVIEC">
+          <ScalarProperty Name="maca" ColumnName="maca" />
+          <ScalarProperty Name="manv" ColumnName="manv" />
+          <ScalarProperty Name="giobd" ColumnName="giobd" />
+          <ScalarProperty Name="giokt" ColumnName="giokt" />
+          <ScalarProperty Name="sotien" ColumnName="sotien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHITIETHDs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.CHITIETHD">
+        <MappingFragment StoreEntitySet="CHITIETHD">
+          <ScalarProperty Name="mahd" ColumnName="mahd" />
+          <ScalarProperty Name="mahh" ColumnName="mahh" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="thanhtien" ColumnName="thanhtien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUNGCAPs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.CUNGCAP">
+        <MappingFragment StoreEntitySet="CUNGCAP">
+          <ScalarProperty Name="mahh" ColumnName="mahh" />
+          <ScalarProperty Name="mancc" ColumnName="mancc" />
+          <ScalarProperty Name="ngaynhap" ColumnName="ngaynhap" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="gianhap" ColumnName="gianhap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HANGHOAs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.HANGHOA">
+        <MappingFragment StoreEntitySet="HANGHOA">
+          <ScalarProperty Name="mahh" ColumnName="mahh" />
+          <ScalarProperty Name="tenhh" ColumnName="tenhh" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="maloaihh" ColumnName="maloaihh" />
+          <ScalarProperty Name="macc" ColumnName="macc" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOADONs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.HOADON">
+        <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="mahd" ColumnName="mahd" />
+          <ScalarProperty Name="makh" ColumnName="makh" />
+          <ScalarProperty Name="manv" ColumnName="manv" />
+          <ScalarProperty Name="ngaylap" ColumnName="ngaylap" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+          <ScalarProperty Name="giamgia" ColumnName="giamgia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACHHANGs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.KHACHHANG">
+        <MappingFragment StoreEntitySet="KHACHHANG">
+          <ScalarProperty Name="makh" ColumnName="makh" />
+          <ScalarProperty Name="tenkh" ColumnName="tenkh" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="maloaikh" ColumnName="maloaikh" />
+          <ScalarProperty Name="diemtichluy" ColumnName="diemtichluy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHUVUCs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.KHUVUC">
+        <MappingFragment StoreEntitySet="KHUVUC">
+          <ScalarProperty Name="makv" ColumnName="makv" />
+          <ScalarProperty Name="tenkv" ColumnName="tenkv" />
+          <ScalarProperty Name="trangthai" ColumnName="trangthai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KIEMKEs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.KIEMKE">
+        <MappingFragment StoreEntitySet="KIEMKE">
+          <ScalarProperty Name="ngaykiemke" ColumnName="ngaykiemke" />
+          <ScalarProperty Name="mahh" ColumnName="mahh" />
+          <ScalarProperty Name="sldaban" ColumnName="sldaban" />
+          <ScalarProperty Name="slconlai" ColumnName="slconlai" />
+          <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAIHANGHOAs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.LOAIHANGHOA">
+        <MappingFragment StoreEntitySet="LOAIHANGHOA">
+          <ScalarProperty Name="maloaihh" ColumnName="maloaihh" />
+          <ScalarProperty Name="tenloai" ColumnName="tenloai" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAIKHACHHANGs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.LOAIKHACHHANG">
+        <MappingFragment StoreEntitySet="LOAIKHACHHANG">
+          <ScalarProperty Name="maloaikh" ColumnName="maloaikh" />
+          <ScalarProperty Name="tenloai" ColumnName="tenloai" />
+          <ScalarProperty Name="uudai" ColumnName="uudai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHACCs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.NHACC">
+        <MappingFragment StoreEntitySet="NHACC">
+          <ScalarProperty Name="mancc" ColumnName="mancc" />
+          <ScalarProperty Name="tenncc" ColumnName="tenncc" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHANVIENs">
+      <EntityTypeMapping TypeName="QL_CAFEModel.NHANVIEN">
+        <MappingFragment StoreEntitySet="NHANVIEN">
+          <ScalarProperty Name="manv" ColumnName="manv" />
+          <ScalarProperty Name="tennv" ColumnName="tennv" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="chucvu" ColumnName="chucvu" />
+          <ScalarProperty Name="ngayvaolam" ColumnName="ngayvaolam" />
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+          <ScalarProperty Name="maquanly" ColumnName="maquanly" />
+          <ScalarProperty Name="phanquyen" ColumnName="phanquyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="01243338a2ce476aaa6de2eddd939b31" Name="Diagram1">
+        <EntityTypeShape EntityType="QL_CAFEModel.BAN" Width="1.5" PointX="11" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CAFEModel.CALAMVIEC" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CAFEModel.CHITIETHD" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CAFEModel.CUNGCAP" Width="1.5" PointX="8.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CAFEModel.HANGHOA" Width="1.5" PointX="6" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CAFEModel.HOADON" Width="1.5" PointX="6" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CAFEModel.KHACHHANG" Width="1.5" PointX="3.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CAFEModel.KHUVUC" Width="1.5" PointX="8.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CAFEModel.KIEMKE" Width="1.5" PointX="8.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CAFEModel.LOAIHANGHOA" Width="1.5" PointX="3.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CAFEModel.LOAIKHACHHANG" Width="1.5" PointX="1.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CAFEModel.NHACC" Width="1.5" PointX="6" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CAFEModel.NHANVIEN" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="QL_CAFEModel.fk_makv_ban" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CAFEModel.fk_manv_from_calamviec" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CAFEModel.fk_mahd_cthd" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CAFEModel.fk_mahh_cthd" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CAFEModel.fk_mahh_cungcap" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CAFEModel.fk_mancc_from_cungcap" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CAFEModel.fk_mahh_kiemke" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CAFEModel.fk_maloaihh_from_hanghoa" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CAFEModel.fk_makh_from_hd" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CAFEModel.fk_manv_from_hd" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CAFEModel.fk_maloaikh_from_khachhang" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CAFEModel.fk_nhanvien_quanly" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

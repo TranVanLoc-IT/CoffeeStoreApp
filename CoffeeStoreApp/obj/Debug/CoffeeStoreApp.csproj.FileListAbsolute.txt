@@ -1,0 +1,16 @@
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\bin\Debug\CoffeeStoreApp.exe.config
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\bin\Debug\CoffeeStoreApp.exe
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\bin\Debug\CoffeeStoreApp.pdb
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\bin\Debug\EntityFramework.dll
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\bin\Debug\EntityFramework.SqlServer.dll
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\bin\Debug\EntityFramework.xml
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\bin\Debug\EntityFramework.SqlServer.xml
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.csproj.AssemblyReference.cache
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.CoffeeCard.resources
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.Login.resources
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.Properties.Resources.resources
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.csproj.GenerateResource.cache
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.csproj.CoreCompileInputs.cache
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.csproj.CopyComplete
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.exe
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.pdb
