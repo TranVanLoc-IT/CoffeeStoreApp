@@ -16,5 +16,15 @@ namespace CoffeeStoreApp
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CoffeeCard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

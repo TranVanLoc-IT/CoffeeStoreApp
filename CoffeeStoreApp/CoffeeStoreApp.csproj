@@ -61,18 +61,41 @@
     <Compile Include="CALAMVIEC.cs">
       <DependentUpon>QLCF.tt</DependentUpon>
     </Compile>
+    <Compile Include="Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
     <Compile Include="CHITIETHD.cs">
       <DependentUpon>QLCF.tt</DependentUpon>
     </Compile>
-    <Compile Include="CoffeeCard.cs" />
+    <Compile Include="CoffeeCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="CoffeeCard.Designer.cs">
       <DependentUpon>CoffeeCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoffeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoffeeList.Designer.cs">
+      <DependentUpon>CoffeeList.cs</DependentUpon>
     </Compile>
     <Compile Include="CUNGCAP.cs">
       <DependentUpon>QLCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Data.cs" />
-    <Compile Include="Login.cs" />
+    <Compile Include="Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Details.Designer.cs">
+      <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImagePath.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
@@ -97,11 +120,23 @@
     <Compile Include="LOAIKHACHHANG.cs">
       <DependentUpon>QLCF.tt</DependentUpon>
     </Compile>
+    <Compile Include="Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
     <Compile Include="NHACC.cs">
       <DependentUpon>QLCF.tt</DependentUpon>
     </Compile>
     <Compile Include="NHANVIEN.cs">
       <DependentUpon>QLCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pay.Designer.cs">
+      <DependentUpon>Pay.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,11 +155,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLCF.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CoffeeCard.resx">
       <DependentUpon>CoffeeCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CoffeeList.resx">
+      <DependentUpon>CoffeeList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pay.resx">
+      <DependentUpon>Pay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +185,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
