@@ -16,6 +16,8 @@ namespace CoffeeStoreApp
         {
             Console.WriteLine("Commit");
             Console.WriteLine("Commit in app");
+
+            Console.WriteLine("Commit on github");
             InitializeComponent();
         }
 
