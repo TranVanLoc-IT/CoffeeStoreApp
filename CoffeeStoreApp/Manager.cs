@@ -59,5 +59,10 @@ namespace CoffeeStoreApp
                     break;
             }
         }
+
+        private void Manager_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -15,7 +15,13 @@ namespace CoffeeStoreApp
         public Customer()
         {
             Console.WriteLine("Commit");
+            Console.WriteLine("Commit in app");
             InitializeComponent();
+        }
+
+        private void Customer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
