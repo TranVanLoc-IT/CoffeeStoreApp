@@ -60,8 +60,8 @@ namespace CoffeeStoreApp
                     OpenChildForm(view, sender);
                     break;
                 case "btnCustomer":
-                    Customer customer = new Customer();
-                    OpenChildForm(customer, sender);
+                    //Customer customer = new Customer();
+                    //OpenChildForm(customer, sender);
                     break;
                 case "btnPay":
                     Pay pay = new Pay(this._nv);
