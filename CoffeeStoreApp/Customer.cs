@@ -14,6 +14,7 @@ namespace CoffeeStoreApp
     {
         public Customer()
         {
+            Console.WriteLine("Commit");
             InitializeComponent();
         }
     }
