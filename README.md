@@ -19,6 +19,8 @@
 </div>
 <hr>
 ### 👩‍💻 About this project
+<!--- must use enter for each line to keep it distance--->
+
 - ☕ Cafés are becoming more popular among coffee lovers.
 
 - 🛫 To improve and sustain this kind of drink, we need a system or program to manage a large amount of information and distribute products to each retailer.
