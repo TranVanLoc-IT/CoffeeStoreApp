@@ -1,4 +1,10 @@
-<h1 style="text-align: center, color:red">WELCOME TO COFFEE PROJECT APP</h1>
+<style>
+  #id{
+    text-align: center,
+    color: orange
+  }
+</style>
+<h1 id="title">WELCOME TO COFFEE PROJECT APP</h1>
 
 Cafés are becoming more popular among coffee lovers.
 To improve and sustain this kind of drink, we need a system or program to manage a large amount of information and distribute products to each retailer. Furthermore, we'll broaden the scope of the shop system throughout the country.
