@@ -18,7 +18,6 @@
 <img src="https://komarev.com/ghpvc/?username=TranVanLoc-IT&style=flat-square&color=blue" alt=""/>
 </div>
 <hr>
----
 ### 👩‍💻 About this project
 - ☕ Cafés are becoming more popular among coffee lovers.
 
