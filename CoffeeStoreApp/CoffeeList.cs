@@ -114,7 +114,7 @@ namespace CoffeeStoreApp
 
         private void CoffeeList_Load(object sender, EventArgs e)
         {
-            cbFilter.Items.AddRange(data.db.LOAIHANGHOAs.Select(itm => itm.tenloai).ToArray());
+            cbFilter.Items.AddRange(data.db.LOAIHANGHOAs.Select(itm => itm.tenloai).Distinct().ToArray());
             LoadHotCfs();
             LoadAllCfs();
         }

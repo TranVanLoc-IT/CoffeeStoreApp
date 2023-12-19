@@ -66,3 +66,5 @@ L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\bin\Debug\System.Security.Principa
 L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\bin\Debug\System.Text.Encoding.CodePages.xml
 L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\bin\Debug\System.Threading.Tasks.Extensions.xml
 L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.BillStatus.resources
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.ManageStorage.resources
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.StatisticIncome.resources

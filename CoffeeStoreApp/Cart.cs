@@ -13,7 +13,8 @@ namespace CoffeeStoreApp
 {
     public partial class Cart : Form
     {
-       private NHANVIEN _nv { get; set; }
+        private NHANVIEN _nv { get; set; }
+        public List<CartDTO> cfs { get; set; }
         public Cart(NHANVIEN nv)
         {
             this._nv = nv;
@@ -22,7 +23,7 @@ namespace CoffeeStoreApp
 
         private void Cart_Load(object sender, EventArgs e)
         {
-            MongoClient client = new MongoClient();
+            MongoClient client = new MongoClient(@"mongodb://127.0.0.1:27017");
 
             var database = client.GetDatabase("CoffeeDB");
             var collection = database.GetCollection<CartDTO>("cart");
@@ -36,6 +37,8 @@ namespace CoffeeStoreApp
             }
             txtTotalQuantity.Text = quantity.ToString();
             txtTotalMoney.Text = money.ToString();
+            cfs = new List<CartDTO>(resource.Count);
+            cfs = resource;
             dataGridViewCart.DataSource = resource;
         }
 

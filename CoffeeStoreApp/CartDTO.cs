@@ -7,7 +7,7 @@ using System.ComponentModel;
 using MongoDB.Bson.Serialization.Attributes;
 namespace CoffeeStoreApp
 {
-    class CartDTO
+    public class CartDTO
     {
         [BsonElement("_stt")]
         [DisplayName("Số thứ tự")]

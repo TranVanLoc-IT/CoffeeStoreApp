@@ -16,7 +16,11 @@ namespace CoffeeStoreApp
         private NHANVIEN _nv { get; set; }
         public HOADON hd { get; set; }
         public KHACHHANG kh { get; set; }
-        private int _payStep = 1;
+
+        private static int _payStep = 1;
+
+        private static List<CartDTO> cfs { get; set; }
+
         private bool isFormClosed = false;
         private Form activeForm { get; set; }
 
@@ -34,15 +38,15 @@ namespace CoffeeStoreApp
                 Image image = Image.FromStream(stream);
                 if(_payStep == 1)
                 {
-                    fillCustomerInfo.Image.Dispose();
+                    fillCustomerInfo.Image = null;
                 }    
                 if (_payStep == 2)
                 {
-                    fillBillInfo.Image.Dispose();
+                    fillBillInfo.Image = null;
                 }
                 if(_payStep==3)
                 {
-                    success.Image.Dispose();
+                    success.Image = null;
                 }
                 (sender as Button).Image = image;
             }
@@ -67,21 +71,33 @@ namespace CoffeeStoreApp
 
         private void ChildForm_NextStepHandle(object sender, EventArgs e)
         {
+            foreach(var control in activeForm.Controls)
+            {
+                if(control is TextBox t)
+                {
+                    if(string.IsNullOrEmpty(t.Text))
+                    {
+                        MessageBox.Show("Thiếu thông tin", "Lỗi");
+                        return;
+                    }    
+                }    
+            }    
             // Xử lý khi form con đóng, kiểm tra tên của button
             string buttonName = (sender as Button).Name;
-            int prev = this._payStep;
             if (buttonName.Contains("Next"))
             {
-                this._payStep += 1;
+                _payStep += 1;
             }
             else
             {
-                this._payStep -= 1;
+                _payStep -= 1;
             }
-           
-            this.Close();
-            switch (this._payStep)
+            switch (_payStep)
             {
+
+                case 1:
+                    Btn_Step_Click_Handle(confirmProduct, e);
+                    break;
                 case 2:
                     Btn_Step_Click_Handle(fillCustomerInfo, e);
                     break;
@@ -103,23 +119,21 @@ namespace CoffeeStoreApp
             // Lấy giá trị trả về từ thuộc tính ReturnValue của form con
             if (!isFormClosed)
             {
-                if (sender is Cart)
+                if (sender is Cart c)
                 {
                     isFormClosed = true;
-                    Btn_Step_Click_Handle(fillCustomerInfo, EventArgs.Empty);
+                    cfs = new List<CartDTO>(c.cfs.Count);
+                    cfs = c.cfs;
                 }
                 else if (sender is Customer cus)
                 {
                     kh = cus.kh;
                     isFormClosed = true;
-                    Btn_Step_Click_Handle(fillBillInfo, EventArgs.Empty);
                 }
                 else if (sender is BillInfo b)
                 {
                     hd = b.hd;
                     isFormClosed = true;
-                    BillStatus status = new BillStatus(hd);
-                    OpenChildForm(status, success);
                 }
                 else
                 {
@@ -148,19 +162,27 @@ namespace CoffeeStoreApp
                     cus.FormClosed += ChildForm_FormClosed;
                     break;
                 case "fillBillInfo":
-                    BillInfo info = new BillInfo(hd,kh.tenkh);
+                    // object null exception
+                    BillInfo info = new BillInfo();
                     OpenChildForm(info, sender);
                     info.FormClosed += ChildForm_FormClosed;
+                    hd.makh = kh.makh;
+                    info.hd = hd;
+                    info._tenkh = kh.tenkh;
+                    info.cfs = cfs;
                     break;
                 case "success":
-                    this.Close();
+                    BillStatus status = new BillStatus();
+                    OpenChildForm(status, sender);
+                    status.FormClosed += ChildForm_FormClosed;
+                    status.hd = hd;
                     break;
             }
         }
 
         private void Pay_Load(object sender, EventArgs e)
         {
-            confirmProduct.Click += Btn_Step_Click_Handle;
+            Btn_Step_Click_Handle(confirmProduct, e);
         }
     }
 }

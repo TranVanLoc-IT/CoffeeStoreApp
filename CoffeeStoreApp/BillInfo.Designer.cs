@@ -43,7 +43,8 @@ namespace CoffeeStoreApp
             this.label1 = new System.Windows.Forms.Label();
             this.btnSelectTable = new System.Windows.Forms.Button();
             this.btnCancelTable = new System.Windows.Forms.Button();
-            this.btnBill = new System.Windows.Forms.Button();
+            this.btnCreateBill = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,29 +175,39 @@ namespace CoffeeStoreApp
             // 
             // btnCancelTable
             // 
-            this.btnCancelTable.Location = new System.Drawing.Point(533, 94);
+            this.btnCancelTable.Location = new System.Drawing.Point(533, 58);
             this.btnCancelTable.Name = "btnCancelTable";
             this.btnCancelTable.Size = new System.Drawing.Size(108, 40);
             this.btnCancelTable.TabIndex = 3;
             this.btnCancelTable.Text = "Hủy chọn ";
             this.btnCancelTable.UseVisualStyleBackColor = true;
             // 
-            // btnBill
+            // btnCreateBill
             // 
-            this.btnBill.Location = new System.Drawing.Point(487, 186);
-            this.btnBill.Name = "btnBill";
-            this.btnBill.Size = new System.Drawing.Size(108, 40);
-            this.btnBill.TabIndex = 4;
-            this.btnBill.Text = "Tạo hóa đơn";
-            this.btnBill.UseVisualStyleBackColor = true;
-            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
+            this.btnCreateBill.Location = new System.Drawing.Point(444, 182);
+            this.btnCreateBill.Name = "btnCreateBill";
+            this.btnCreateBill.Size = new System.Drawing.Size(108, 40);
+            this.btnCreateBill.TabIndex = 4;
+            this.btnCreateBill.Text = "Tạo hóa đơn";
+            this.btnCreateBill.UseVisualStyleBackColor = true;
+            this.btnCreateBill.Click += new System.EventHandler(this.btnBill_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(444, 136);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(108, 40);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // BillInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 232);
-            this.Controls.Add(this.btnBill);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnCreateBill);
             this.Controls.Add(this.btnCancelTable);
             this.Controls.Add(this.btnSelectTable);
             this.Controls.Add(this.groupBox1);
@@ -226,6 +237,7 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSelectTable;
         private System.Windows.Forms.Button btnCancelTable;
-        private System.Windows.Forms.Button btnBill;
+        private System.Windows.Forms.Button btnCreateBill;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

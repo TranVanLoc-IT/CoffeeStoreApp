@@ -37,7 +37,7 @@ namespace CoffeeStoreApp
             this.lbId = new System.Windows.Forms.Label();
             this.btnStatistic = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
-            this.btnHistory = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.btnCart = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@ namespace CoffeeStoreApp
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnStatistic);
             this.panel1.Controls.Add(this.btnPay);
-            this.panel1.Controls.Add(this.btnHistory);
+            this.panel1.Controls.Add(this.btnImport);
             this.panel1.Controls.Add(this.btnCustomer);
             this.panel1.Controls.Add(this.btnCart);
             this.panel1.Controls.Add(this.btnView);
@@ -147,23 +147,23 @@ namespace CoffeeStoreApp
             this.btnPay.UseVisualStyleBackColor = false;
             this.btnPay.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // btnHistory
+            // btnImport
             // 
-            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnHistory.FlatAppearance.BorderSize = 0;
-            this.btnHistory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
-            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistory.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistory.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnHistory.Location = new System.Drawing.Point(1, 368);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(197, 63);
-            this.btnHistory.TabIndex = 7;
-            this.btnHistory.Text = "Lịch sử đơn hàng";
-            this.btnHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistory.UseVisualStyleBackColor = false;
-            this.btnHistory.Click += new System.EventHandler(this.btnView_Click);
+            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnImport.FlatAppearance.BorderSize = 0;
+            this.btnImport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnImport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImport.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.SeaShell;
+            this.btnImport.Location = new System.Drawing.Point(1, 368);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(197, 63);
+            this.btnImport.TabIndex = 7;
+            this.btnImport.Text = "Quản lí kho hàng";
+            this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnCustomer
             // 
@@ -234,8 +234,6 @@ namespace CoffeeStoreApp
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Chocolate;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(168, 3);
@@ -274,8 +272,6 @@ namespace CoffeeStoreApp
             // 
             // linkLabel1
             // 
-            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -300,6 +296,7 @@ namespace CoffeeStoreApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1234, 664);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panel2);
@@ -325,7 +322,7 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button btnPay;
-        private System.Windows.Forms.Button btnHistory;
+        private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnCart;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -84,11 +84,6 @@ namespace CoffeeStoreApp
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cbFilter.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilter.FormattingEnabled = true;
-            this.cbFilter.Items.AddRange(new object[] {
-            "Xe tay côn",
-            "Xe mô tô",
-            "Xe số",
-            "Xe tay ga"});
             this.cbFilter.Location = new System.Drawing.Point(232, 437);
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(152, 27);

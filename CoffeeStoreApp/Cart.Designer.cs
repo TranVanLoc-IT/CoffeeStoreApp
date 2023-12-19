@@ -64,7 +64,7 @@ namespace CoffeeStoreApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(237, 374);
+            this.label2.Location = new System.Drawing.Point(220, 374);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 25);
             this.label2.TabIndex = 12;
@@ -73,9 +73,9 @@ namespace CoffeeStoreApp
             // txtTotalMoney
             // 
             this.txtTotalMoney.Enabled = false;
-            this.txtTotalMoney.Location = new System.Drawing.Point(420, 369);
+            this.txtTotalMoney.Location = new System.Drawing.Point(393, 369);
             this.txtTotalMoney.Name = "txtTotalMoney";
-            this.txtTotalMoney.Size = new System.Drawing.Size(162, 30);
+            this.txtTotalMoney.Size = new System.Drawing.Size(189, 30);
             this.txtTotalMoney.TabIndex = 11;
             // 
             // dataGridViewCart

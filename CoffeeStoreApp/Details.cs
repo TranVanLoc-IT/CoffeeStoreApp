@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 using MongoDB.Driver;
-using MongoDB.Bson;
 namespace CoffeeStoreApp
 {
     public partial class Details : Form
@@ -47,7 +42,7 @@ namespace CoffeeStoreApp
             KIEMKE inventory = data.GetInventoryLatestOfDrinks(idhh);
             // read coffee info 
             MongoClient client = new MongoClient(connectionString: ConnectionString);
-
+            pictureBox1.Image = Image.FromStream(new FileStream("../../Images/coffees/" + hh.hinhanh, FileMode.Open));
             var database = client.GetDatabase("CoffeeDB");
 
             var collection = database.GetCollection<CoffeeInfo>("cfi");

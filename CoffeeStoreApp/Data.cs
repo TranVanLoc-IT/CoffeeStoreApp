@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,13 +22,13 @@ namespace CoffeeStoreApp
                       select itm).ToList();
             return hh;
         }
-        public KIEMKE GetInventoryLatestOfDrinks(string id)
+        public KIEMKE GetInventoryLatestOfDrinks(string id, int month = 0)
         {
             var getproducts = db.KIEMKEs.Where(itm => itm.mahh == id).ToList();
             if (getproducts.Count() == 0) return null;
             DateTime latestTime = getproducts.Max(itm => itm.ngaykiemke);
             var getLatestInventory = getproducts.Where(itm => itm.ngaykiemke == latestTime).FirstOrDefault();
-            return getLatestInventory;
+            return getproducts.Last();
         }
         public bool EditCustomer(KHACHHANG kh, string option)
         {
@@ -56,11 +57,16 @@ namespace CoffeeStoreApp
             }
             return true;
         }
-        public bool AddBill(HOADON hd)
+        public bool AddBill(HOADON hd, List<CHITIETHD> cthds)
         {
             if (hd == null) return false;
             try
             {
+                foreach(var ct in cthds)
+                {
+                    db.CHITIETHDs.Add(ct);
+                    db.Entry<CHITIETHD>(ct).State = System.Data.Entity.EntityState.Added;
+                }    
                 db.HOADONs.Add(hd);
                 db.Entry<HOADON>(hd).State = System.Data.Entity.EntityState.Added;
                 db.SaveChanges();
@@ -70,6 +76,33 @@ namespace CoffeeStoreApp
                 return false;
             }
             return true;
+        }
+        public bool AddImport(KIEMKE kk)
+        {
+            if (kk == null) return false;
+            try
+            {
+                db.KIEMKEs.Add(kk);
+                db.Entry<KIEMKE>(kk).State = System.Data.Entity.EntityState.Added;
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
+        }
+        public string GenerateBillCode()
+        {
+            string sql = "exec GenerateBillCode @res out";
+            var outParam = new SqlParameter("res", System.Data.SqlDbType.Char, 5);
+
+            int success = db.Database.ExecuteSqlCommand(sql, outParam);
+            if(success != 0)
+            {
+                return outParam.Value.ToString();
+            }
+            return null;
         }
     }
 }

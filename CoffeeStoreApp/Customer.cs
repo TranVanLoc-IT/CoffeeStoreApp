@@ -48,7 +48,6 @@ namespace CoffeeStoreApp
         }
         private void btnEditCus_Click(object sender, EventArgs e)
         {
-            KHACHHANG kh = new KHACHHANG();
             kh.makh = txtCusId.Text;
             kh.maloaikh = txtCustomerType.Text;
             kh.sdt = txtCusSDT.Text;
@@ -70,9 +69,9 @@ namespace CoffeeStoreApp
         private void txtCusId_TextChanged(object sender, EventArgs e)
         {
             string id = txtCusId.Text;
-            if(id.Length == 5)
+            if(id.Length == 6)
             {
-                KHACHHANG kh = data.db.KHACHHANGs.Where(itm => itm.makh == id).FirstOrDefault();
+                kh = data.db.KHACHHANGs.Where(itm => itm.makh == id).FirstOrDefault();
                 if(kh != null)
                 {
                     txtCusId.Text = kh.makh;

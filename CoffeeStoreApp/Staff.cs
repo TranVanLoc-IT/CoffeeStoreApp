@@ -72,9 +72,13 @@ namespace CoffeeStoreApp
                     Cart cart = new Cart(this._nv);
                     OpenChildForm(cart, sender);
                     break;
-                case "btnInventory":
+                case "btnStatistic":
                     StatisticIncome sta = new StatisticIncome();
                     OpenChildForm(sta, sender);
+                    break;
+                case "btnImport":
+                    ManageStorage storage = new ManageStorage();
+                    OpenChildForm(storage, sender);
                     break;
 
             }

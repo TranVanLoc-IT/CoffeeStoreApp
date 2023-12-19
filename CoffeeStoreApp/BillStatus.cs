@@ -13,9 +13,8 @@ namespace CoffeeStoreApp
     public partial class BillStatus : Form
     {
         public HOADON hd { get; set; }
-        public BillStatus(HOADON hd)
+        public BillStatus()
         {
-            this.hd = hd;
             InitializeComponent();
         }
 
