@@ -7,16 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
+using MongoDB.Driver;
+using MongoDB.Bson;
 namespace CoffeeStoreApp
 {
     public partial class Details : Form
     {
+        private const string ConnectionString = @"mongodb://127.0.0.1:27017";
         private Data data = new Data();
         public string idhh { get; set; }
         public int mode { get; set; }
+        private NHANVIEN _nv { get; set; }
         public Details(NHANVIEN nv, string idhh, int f)
         {
+            this._nv = nv;
+            this.idhh = idhh;
             InitializeComponent();
         }
 
@@ -39,8 +45,23 @@ namespace CoffeeStoreApp
         {
             HANGHOA hh = data.db.HANGHOAs.Where(itm => itm.mahh == idhh).FirstOrDefault();
             KIEMKE inventory = data.GetInventoryLatestOfDrinks(idhh);
+            // read coffee info 
+            MongoClient client = new MongoClient(connectionString: ConnectionString);
+
+            var database = client.GetDatabase("CoffeeDB");
+
+            var collection = database.GetCollection<CoffeeInfo>("cfi");
+            var resources = collection.Find(Builders<CoffeeInfo>.Filter.Empty).FirstOrDefault();
+            if(resources != null)
+            {
+                // do
+                txtBrand.Text = resources.thuonghieu;
+                txtMadeIn.Text = resources.xuatxu;
+                txtDescribe.Text = resources.thongtin;
+                txtTaste.Text = resources.huongvi;
+            }    
             // sure
-            if(hh != null)
+            if(hh != null && inventory != null)
             {
                 txtName.Text = hh.tenhh;
                 txtPrice.Text = hh.dongia.ToString("N2");
@@ -51,6 +72,31 @@ namespace CoffeeStoreApp
             {
 
             } 
+        }
+
+        private void btnToCart_Click(object sender, EventArgs e)
+        {
+            MongoClient client = new MongoClient(connectionString: ConnectionString);
+
+            var database = client.GetDatabase("CoffeeDB");
+
+            var collection = database.GetCollection<CartDTO>("cart");
+            try
+            {
+
+                collection.InsertOne(new CartDTO()
+                {   
+                    id = idhh,
+                    soluong = int.Parse(txtQuantitySold.Text),
+                    ten = txtName.Text,
+                    stt = 1,
+                    tongtien = (double.Parse(txtQuantitySold.Text) * double.Parse(txtPrice.Text))
+                });
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Thông báo", "Thêm món thất bại");
+            }
+            MessageBox.Show("Thông báo", "Thêm món thành công");
         }
     }
 }

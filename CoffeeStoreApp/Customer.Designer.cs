@@ -29,8 +29,9 @@ namespace CoffeeStoreApp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer));
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grInfo = new System.Windows.Forms.GroupBox();
             this.btnAddCus = new System.Windows.Forms.Button();
             this.btnEditCus = new System.Windows.Forms.Button();
             this.btnDelCus = new System.Windows.Forms.Button();
@@ -47,31 +48,33 @@ namespace CoffeeStoreApp
             this.label20 = new System.Windows.Forms.Label();
             this.txtCusId = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.groupBox3.SuspendLayout();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.grInfo.SuspendLayout();
             this.panelCusinfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox3
+            // grInfo
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.AutoSize = true;
-            this.groupBox3.Controls.Add(this.btnAddCus);
-            this.groupBox3.Controls.Add(this.btnEditCus);
-            this.groupBox3.Controls.Add(this.btnDelCus);
-            this.groupBox3.Controls.Add(this.panelCusinfo);
-            this.groupBox3.Controls.Add(this.txtCusId);
-            this.groupBox3.Controls.Add(this.label27);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(25, 64);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(954, 379);
-            this.groupBox3.TabIndex = 58;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Thông tin khách hàng";
+            this.grInfo.AutoSize = true;
+            this.grInfo.Controls.Add(this.btnAddCus);
+            this.grInfo.Controls.Add(this.btnEditCus);
+            this.grInfo.Controls.Add(this.btnDelCus);
+            this.grInfo.Controls.Add(this.panelCusinfo);
+            this.grInfo.Controls.Add(this.txtCusId);
+            this.grInfo.Controls.Add(this.label27);
+            this.grInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grInfo.Location = new System.Drawing.Point(25, 64);
+            this.grInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.grInfo.Name = "grInfo";
+            this.grInfo.Padding = new System.Windows.Forms.Padding(4);
+            this.grInfo.Size = new System.Drawing.Size(954, 379);
+            this.grInfo.TabIndex = 58;
+            this.grInfo.TabStop = false;
+            this.grInfo.Text = "Thông tin khách hàng";
             // 
             // btnAddCus
             // 
@@ -90,7 +93,6 @@ namespace CoffeeStoreApp
             this.btnAddCus.Text = "Thêm";
             this.btnAddCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddCus.UseVisualStyleBackColor = false;
-            this.btnAddCus.Visible = false;
             // 
             // btnEditCus
             // 
@@ -109,7 +111,7 @@ namespace CoffeeStoreApp
             this.btnEditCus.Text = "Cập nhật";
             this.btnEditCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditCus.UseVisualStyleBackColor = false;
-            this.btnEditCus.Visible = false;
+            this.btnEditCus.Click += new System.EventHandler(this.btnEditCus_Click);
             // 
             // btnDelCus
             // 
@@ -128,7 +130,6 @@ namespace CoffeeStoreApp
             this.btnDelCus.Text = "Xóa";
             this.btnDelCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelCus.UseVisualStyleBackColor = false;
-            this.btnDelCus.Visible = false;
             // 
             // panelCusinfo
             // 
@@ -250,6 +251,7 @@ namespace CoffeeStoreApp
             this.txtCusId.Name = "txtCusId";
             this.txtCusId.Size = new System.Drawing.Size(184, 27);
             this.txtCusId.TabIndex = 19;
+            this.txtCusId.TextChanged += new System.EventHandler(this.txtCusId_TextChanged);
             // 
             // label27
             // 
@@ -262,18 +264,24 @@ namespace CoffeeStoreApp
             this.label27.TabIndex = 18;
             this.label27.Text = "CCCD khách:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 504);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.grInfo);
             this.Name = "Customer";
             this.Text = "Customer";
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.Load += new System.EventHandler(this.Customer_Load);
+            this.grInfo.ResumeLayout(false);
+            this.grInfo.PerformLayout();
             this.panelCusinfo.ResumeLayout(false);
             this.panelCusinfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,7 +289,7 @@ namespace CoffeeStoreApp
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox grInfo;
         private System.Windows.Forms.Button btnAddCus;
         private System.Windows.Forms.Button btnEditCus;
         private System.Windows.Forms.Button btnDelCus;
@@ -298,5 +306,6 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtCusId;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

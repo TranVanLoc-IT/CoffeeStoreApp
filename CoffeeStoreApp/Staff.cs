@@ -28,7 +28,7 @@ namespace CoffeeStoreApp
         private void ActiveButton(object sender)
         {
             if (currentButton != null)
-                currentButton.BackColor = Color.Red;
+                currentButton.BackColor = Color.FromArgb(128, 64, 0);
             Button btn = sender as Button;
             currentButton = btn;
             btn.BackColor = Color.Chocolate;
@@ -46,6 +46,7 @@ namespace CoffeeStoreApp
             childForm.Dock = DockStyle.Fill;
             this.mainPanel.Controls.Add(childForm);
             this.Height += childForm.Height - this.mainPanel.Height;
+            this.Width += childForm.Width - this.mainPanel.Width;
             this.mainPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
@@ -57,19 +58,23 @@ namespace CoffeeStoreApp
             {
                 case "btnView":
                     CoffeeList view = new CoffeeList(this._nv);
-                    OpenChildForm(view, sender);
+                    OpenChildForm(view, sender);    
                     break;
                 case "btnCustomer":
-                    Customer customer = new Customer();
+                    Customer customer = new Customer(this._nv);
                     OpenChildForm(customer, sender);
                     break;
                 case "btnPay":
                     Pay pay = new Pay(this._nv);
                     OpenChildForm(pay, sender);
                     break;
-                case "btncart":
-                    Cart cart = new Cart();
+                case "btnCart":
+                    Cart cart = new Cart(this._nv);
                     OpenChildForm(cart, sender);
+                    break;
+                case "btnInventory":
+                    StatisticIncome sta = new StatisticIncome();
+                    OpenChildForm(sta, sender);
                     break;
 
             }

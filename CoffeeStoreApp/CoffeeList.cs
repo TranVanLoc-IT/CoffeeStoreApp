@@ -15,7 +15,7 @@ namespace CoffeeStoreApp
     {
         private Data data = new Data();
         private int _height { get; set; }
-        private static List<CoffeeCard> allCfs { get; set; } = new List<CoffeeCard>();
+        private static List<HANGHOA> allCfs { get; set; } = new List<HANGHOA>();
 
         private NHANVIEN _nv { get; set; }
         public CoffeeList(NHANVIEN nv)
@@ -80,7 +80,7 @@ namespace CoffeeStoreApp
                 card.txtName.Text = itm.tenhh;
                 card.txtPrice.Text = itm.dongia.ToString();
                 card.btnViewProduct.Click += ToDetails;
-                allCfs.Add(card);
+                allCfs.Add(itm);
                 flowLayoutAll.Controls.Add(card);
             }
         }
@@ -95,30 +95,26 @@ namespace CoffeeStoreApp
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = cbFilter.SelectedIndex;
+            string textSelection = cbFilter.GetItemText(cbFilter.SelectedItem);
+            List<HANGHOA> newListHH = new List<HANGHOA>();
+            newListHH = allCfs.Where(itm => itm.LOAIHANGHOA.tenloai.Equals(textSelection)).ToList();
             List<CoffeeCard> newListCard = new List<CoffeeCard>();
-            if (index == 0)
+            foreach(HANGHOA itm in newListHH)
             {
+                CoffeeCard card = new CoffeeCard();
 
-            }
-            else if (index == 1)
-            {
-              
-            }
-            else if (index == 2)
-            {
-               
-            }
-            else
-            {
-              
-            }
+                card.txtName.Text = itm.tenhh;
+                card.txtPrice.Text = itm.dongia.ToString();
+                card.btnViewProduct.Click += ToDetails;
+                newListCard.Add(card);
+            }    
             flowLayoutAll.Controls.Clear();
             flowLayoutAll.Controls.AddRange(newListCard.ToArray());
         }
 
         private void CoffeeList_Load(object sender, EventArgs e)
         {
+            cbFilter.Items.AddRange(data.db.LOAIHANGHOAs.Select(itm => itm.tenloai).ToArray());
             LoadHotCfs();
             LoadAllCfs();
         }

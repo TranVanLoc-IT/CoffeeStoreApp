@@ -32,9 +32,9 @@ namespace CoffeeStoreApp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.workTime = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbId = new System.Windows.Forms.Label();
             this.btnStatistic = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
@@ -73,23 +73,23 @@ namespace CoffeeStoreApp
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.workTime);
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.lbId);
             this.panel4.Location = new System.Drawing.Point(3, 7);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(194, 100);
             this.panel4.TabIndex = 10;
             // 
-            // label2
+            // workTime
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(93, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 17);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "18G30 - 20G";
+            this.workTime.AutoSize = true;
+            this.workTime.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.workTime.Location = new System.Drawing.Point(93, 58);
+            this.workTime.Name = "workTime";
+            this.workTime.Size = new System.Drawing.Size(91, 17);
+            this.workTime.TabIndex = 12;
+            this.workTime.Text = "18G30 - 20G";
             // 
             // pictureBox2
             // 
@@ -101,15 +101,15 @@ namespace CoffeeStoreApp
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // label1
+            // lbId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(93, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 26);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "NV002";
+            this.lbId.AutoSize = true;
+            this.lbId.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbId.Location = new System.Drawing.Point(93, 19);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(82, 26);
+            this.lbId.TabIndex = 1;
+            this.lbId.Text = "NV002";
             // 
             // btnStatistic
             // 
@@ -127,6 +127,7 @@ namespace CoffeeStoreApp
             this.btnStatistic.Text = "Thống kê";
             this.btnStatistic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStatistic.UseVisualStyleBackColor = false;
+            this.btnStatistic.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnPay
             // 
@@ -144,6 +145,7 @@ namespace CoffeeStoreApp
             this.btnPay.Text = "Thanh toán";
             this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnHistory
             // 
@@ -161,6 +163,7 @@ namespace CoffeeStoreApp
             this.btnHistory.Text = "Lịch sử đơn hàng";
             this.btnHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistory.UseVisualStyleBackColor = false;
+            this.btnHistory.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnCustomer
             // 
@@ -178,6 +181,7 @@ namespace CoffeeStoreApp
             this.btnCustomer.Text = "Khách hàng";
             this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnCart
             // 
@@ -195,6 +199,7 @@ namespace CoffeeStoreApp
             this.btnCart.Text = "Giỏ hàng";
             this.btnCart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCart.UseVisualStyleBackColor = false;
+            this.btnCart.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnView
             // 
@@ -229,9 +234,11 @@ namespace CoffeeStoreApp
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Chocolate;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(168, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(168, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(346, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -240,6 +247,7 @@ namespace CoffeeStoreApp
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -253,9 +261,11 @@ namespace CoffeeStoreApp
             this.button2.Text = "Đăng xuất";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnView_Click);
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(907, 51);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -264,6 +274,8 @@ namespace CoffeeStoreApp
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -277,6 +289,7 @@ namespace CoffeeStoreApp
             // 
             // mainPanel
             // 
+            this.mainPanel.AutoSize = true;
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(200, 113);
             this.mainPanel.Name = "mainPanel";
@@ -302,6 +315,7 @@ namespace CoffeeStoreApp
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -318,11 +332,11 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbId;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button btnStatistic;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label workTime;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
