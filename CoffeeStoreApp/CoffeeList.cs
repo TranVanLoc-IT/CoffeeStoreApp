@@ -93,13 +93,22 @@ namespace CoffeeStoreApp
             Details specs = new Details(_nv, cpns[1], 0);
             specs.ShowDialog();
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+      
+
+        private void CoffeeList_Load(object sender, EventArgs e)
+        {
+            cbFilter.Items.AddRange(data.db.LOAIHANGHOAs.Select(itm => itm.tenloai).Distinct().ToArray());
+            LoadHotCfs();
+            LoadAllCfs();
+        }
+
+        private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             string textSelection = cbFilter.GetItemText(cbFilter.SelectedItem);
             List<HANGHOA> newListHH = new List<HANGHOA>();
             newListHH = allCfs.Where(itm => itm.LOAIHANGHOA.tenloai.Equals(textSelection)).ToList();
             List<CoffeeCard> newListCard = new List<CoffeeCard>();
-            foreach(HANGHOA itm in newListHH)
+            foreach (HANGHOA itm in newListHH)
             {
                 CoffeeCard card = new CoffeeCard();
 
@@ -107,16 +116,9 @@ namespace CoffeeStoreApp
                 card.txtPrice.Text = itm.dongia.ToString();
                 card.btnViewProduct.Click += ToDetails;
                 newListCard.Add(card);
-            }    
+            }
             flowLayoutAll.Controls.Clear();
             flowLayoutAll.Controls.AddRange(newListCard.ToArray());
-        }
-
-        private void CoffeeList_Load(object sender, EventArgs e)
-        {
-            cbFilter.Items.AddRange(data.db.LOAIHANGHOAs.Select(itm => itm.tenloai).Distinct().ToArray());
-            LoadHotCfs();
-            LoadAllCfs();
         }
     }
 }

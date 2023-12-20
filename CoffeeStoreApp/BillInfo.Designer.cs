@@ -41,7 +41,6 @@ namespace CoffeeStoreApp
             this.label2 = new System.Windows.Forms.Label();
             this.txtBillCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSelectTable = new System.Windows.Forms.Button();
             this.btnCancelTable = new System.Windows.Forms.Button();
             this.btnCreateBill = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -164,23 +163,15 @@ namespace CoffeeStoreApp
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã hóa đơn";
             // 
-            // btnSelectTable
-            // 
-            this.btnSelectTable.Location = new System.Drawing.Point(533, 12);
-            this.btnSelectTable.Name = "btnSelectTable";
-            this.btnSelectTable.Size = new System.Drawing.Size(108, 40);
-            this.btnSelectTable.TabIndex = 2;
-            this.btnSelectTable.Text = "Chọn bàn";
-            this.btnSelectTable.UseVisualStyleBackColor = true;
-            // 
             // btnCancelTable
             // 
-            this.btnCancelTable.Location = new System.Drawing.Point(533, 58);
+            this.btnCancelTable.Location = new System.Drawing.Point(533, 2);
             this.btnCancelTable.Name = "btnCancelTable";
             this.btnCancelTable.Size = new System.Drawing.Size(108, 40);
             this.btnCancelTable.TabIndex = 3;
             this.btnCancelTable.Text = "Hủy chọn ";
             this.btnCancelTable.UseVisualStyleBackColor = true;
+            this.btnCancelTable.Click += new System.EventHandler(this.btnCancelTable_Click);
             // 
             // btnCreateBill
             // 
@@ -209,7 +200,6 @@ namespace CoffeeStoreApp
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCreateBill);
             this.Controls.Add(this.btnCancelTable);
-            this.Controls.Add(this.btnSelectTable);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelTable);
             this.Name = "BillInfo";
@@ -235,7 +225,6 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBillCode;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSelectTable;
         private System.Windows.Forms.Button btnCancelTable;
         private System.Windows.Forms.Button btnCreateBill;
         private System.Windows.Forms.Button btnCancel;

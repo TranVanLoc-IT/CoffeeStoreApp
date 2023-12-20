@@ -30,6 +30,7 @@
         <AssociationConnector Association="QL_CAFEModel.fk_manv_from_hd" ManuallyRouted="false" />
         <AssociationConnector Association="QL_CAFEModel.fk_maloaikh_from_khachhang" ManuallyRouted="false" />
         <AssociationConnector Association="QL_CAFEModel.fk_nhanvien_quanly" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CAFEModel.fk_maban_from_hd" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

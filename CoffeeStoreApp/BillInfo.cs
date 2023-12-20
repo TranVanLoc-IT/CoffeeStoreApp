@@ -9,19 +9,22 @@ namespace CoffeeStoreApp
     {
         private Data data = new Data();
 
+        private static string maban;
+
         public HOADON hd { get; set; }
 
         public event Action<string> FormClosingEvent;
         
         public List<CartDTO> cfs { get; set; }
 
-        public string _tenkh { get; set; }
+        public KHACHHANG kh { get; set; }
 
-        public BillInfo(HOADON hd, string tenkh, List<CartDTO> cfs)
+        public BillInfo(HOADON hd,KHACHHANG kh, List<CartDTO> cfs)
         {
             this.hd = hd;
             this.cfs = cfs;
-            this._tenkh = tenkh;
+            this.kh = kh;
+            this.hd.makh = hd.makh;
             InitializeComponent();
         }
         public BillInfo()
@@ -37,15 +40,51 @@ namespace CoffeeStoreApp
         }    
         private void BillInfo_Load(object sender, EventArgs e)
         {
-            //var emptytable 
-            hd.tongtien = cfs.Select(itm => itm.tongtien).Sum();
+            var emptytable = data.GetEmptyTables();
+            foreach(var ban in emptytable)
+            {
+                TableCard table = new TableCard();
+                table.btnTable.BackColor = System.Drawing.Color.GreenYellow;
+                table.btnTable.Text = ban.tenban + " - " + ban.KHUVUC.tenkv;
+                table.btnTable.Name = ban.maban + ban.KHUVUC.makv;
+                panelTable.Controls.Add(table);
+            }    
+            if(cfs.Count() > 1)
+            {
+                hd.tongtien = cfs[0].tongtien;
+            }
+            else
+            {
+                hd.tongtien = cfs.Select(itm => itm.tongtien).Sum();
+            }
             txtTotalMoney.Text = hd.tongtien.ToString("N2");
-            txtCustomerName.Text = _tenkh;
+            txtCustomerName.Text = kh.tenkh;
             txtVAT.Text = (hd.tongtien * 0.2).ToString("N2");
 
             hd.mahd = data.GenerateBillCode();
             txtBillCode.Text = hd.mahd;
+            if(string.IsNullOrEmpty(hd.mahd))
+            {
+                MessageBox.Show("Vui lòng thử lại", "Lỗi");
+            }    
             hd.ngaylap = DateTime.Now;
+        }
+        private void btnTable_Click(object sender, EventArgs e)
+        {
+            maban = (sender as Button).Name;
+            foreach(var t in panelTable.Controls)
+            {
+                if(t is Button table)
+                {
+                    if (table.Name.Equals(maban))
+                    {
+                        table.BackColor = System.Drawing.Color.Red;
+                        break;
+                    }
+                }
+            }    
+
+            txtTableCode.Text = maban;
         }
         private void ClearCart()
         {
@@ -63,6 +102,7 @@ namespace CoffeeStoreApp
         private void btnBill_Click(object sender, EventArgs e)
         {
             List<CHITIETHD> cthds = new List<CHITIETHD>();
+            hd.maban = maban;
             foreach(var i in cfs)
             {
                 CHITIETHD cthd = new CHITIETHD();
@@ -81,6 +121,22 @@ namespace CoffeeStoreApp
             {
                 MessageBox.Show("Thanh toán Thất bại", "Thông báo");
             }
+        }
+
+        private void btnCancelTable_Click(object sender, EventArgs e)
+        {
+            foreach (var t in panelTable.Controls)
+            {
+                if (t is Button table)
+                {
+                    if (table.Name.Equals(maban))
+                    {
+                        table.BackColor = System.Drawing.Color.GreenYellow;
+                        break;
+                    }    
+                }
+            }
+            maban = string.Empty;
         }
     }
 }

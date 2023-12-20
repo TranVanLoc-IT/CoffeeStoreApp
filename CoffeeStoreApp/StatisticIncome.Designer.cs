@@ -29,10 +29,11 @@ namespace CoffeeStoreApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.gbStatisticIncome = new System.Windows.Forms.GroupBox();
+            this.chartIncome = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button1 = new System.Windows.Forms.Button();
             this.txtCfIdOrTypeStatistic = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -40,12 +41,11 @@ namespace CoffeeStoreApp
             this.label25 = new System.Windows.Forms.Label();
             this.lbTotalIncome = new System.Windows.Forms.Label();
             this.lb = new System.Windows.Forms.Label();
-            this.lbSumOfCarSold = new System.Windows.Forms.Label();
+            this.lbSumOfCfSold = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.cbStatisticTimeOptions = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.chartIncome = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gbStatisticIncome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartIncome)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +64,7 @@ namespace CoffeeStoreApp
             this.gbStatisticIncome.Controls.Add(this.label25);
             this.gbStatisticIncome.Controls.Add(this.lbTotalIncome);
             this.gbStatisticIncome.Controls.Add(this.lb);
-            this.gbStatisticIncome.Controls.Add(this.lbSumOfCarSold);
+            this.gbStatisticIncome.Controls.Add(this.lbSumOfCfSold);
             this.gbStatisticIncome.Controls.Add(this.label26);
             this.gbStatisticIncome.Controls.Add(this.cbStatisticTimeOptions);
             this.gbStatisticIncome.Controls.Add(this.label27);
@@ -75,6 +75,24 @@ namespace CoffeeStoreApp
             this.gbStatisticIncome.TabIndex = 95;
             this.gbStatisticIncome.TabStop = false;
             this.gbStatisticIncome.Text = "Thống kê doanh thu";
+            // 
+            // chartIncome
+            // 
+            this.chartIncome.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
+            chartArea1.Name = "ChartArea1";
+            this.chartIncome.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartIncome.Legends.Add(legend1);
+            this.chartIncome.Location = new System.Drawing.Point(23, 37);
+            this.chartIncome.Name = "chartIncome";
+            this.chartIncome.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartIncome.Series.Add(series1);
+            this.chartIncome.Size = new System.Drawing.Size(474, 372);
+            this.chartIncome.TabIndex = 56;
+            this.chartIncome.Text = "chart1";
             // 
             // button1
             // 
@@ -153,16 +171,16 @@ namespace CoffeeStoreApp
             this.lb.TabIndex = 49;
             this.lb.Text = "Tổng doanh thu: ";
             // 
-            // lbSumOfCarSold
+            // lbSumOfCfSold
             // 
-            this.lbSumOfCarSold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbSumOfCarSold.AutoSize = true;
-            this.lbSumOfCarSold.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSumOfCarSold.Location = new System.Drawing.Point(683, 135);
-            this.lbSumOfCarSold.Name = "lbSumOfCarSold";
-            this.lbSumOfCarSold.Size = new System.Drawing.Size(14, 20);
-            this.lbSumOfCarSold.TabIndex = 48;
-            this.lbSumOfCarSold.Text = " ";
+            this.lbSumOfCfSold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbSumOfCfSold.AutoSize = true;
+            this.lbSumOfCfSold.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumOfCfSold.Location = new System.Drawing.Point(683, 135);
+            this.lbSumOfCfSold.Name = "lbSumOfCfSold";
+            this.lbSumOfCfSold.Size = new System.Drawing.Size(14, 20);
+            this.lbSumOfCfSold.TabIndex = 48;
+            this.lbSumOfCfSold.Text = " ";
             // 
             // label26
             // 
@@ -215,24 +233,6 @@ namespace CoffeeStoreApp
             this.textBox1.Text = "Thống kê doanh thu";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // chartIncome
-            // 
-            this.chartIncome.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
-            chartArea5.Name = "ChartArea1";
-            this.chartIncome.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartIncome.Legends.Add(legend5);
-            this.chartIncome.Location = new System.Drawing.Point(23, 37);
-            this.chartIncome.Name = "chartIncome";
-            this.chartIncome.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartIncome.Series.Add(series5);
-            this.chartIncome.Size = new System.Drawing.Size(474, 372);
-            this.chartIncome.TabIndex = 56;
-            this.chartIncome.Text = "chart1";
-            // 
             // StatisticIncome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -261,7 +261,7 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label lbTotalIncome;
         private System.Windows.Forms.Label lb;
-        private System.Windows.Forms.Label lbSumOfCarSold;
+        private System.Windows.Forms.Label lbSumOfCfSold;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ComboBox cbStatisticTimeOptions;
         private System.Windows.Forms.Label label27;

@@ -64,8 +64,7 @@ namespace CoffeeStoreApp
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnTable;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button btnTable;
     }
 }

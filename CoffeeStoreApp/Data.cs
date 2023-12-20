@@ -94,15 +94,29 @@ namespace CoffeeStoreApp
         }
         public string GenerateBillCode()
         {
-            string sql = "exec GenerateBillCode @res out";
-            var outParam = new SqlParameter("res", System.Data.SqlDbType.Char, 5);
+            // Tạo đối tượng SqlParameter cho tham số đầu ra
+            var outParam = new SqlParameter("@res", System.Data.SqlDbType.Char, 5);
+            outParam.Direction = System.Data.ParameterDirection.Output; // Xác định tham số là đầu ra
 
-            int success = db.Database.ExecuteSqlCommand(sql, outParam);
-            if(success != 0)
+            // Gọi stored procedure và cung cấp tham số
+            int success = db.Database.ExecuteSqlCommand("exec GenerateBillCode @res out", outParam);
+
+            // Kiểm tra xem có lỗi hay không (success != 0)
+            if (success != 0)
             {
-                return outParam.Value.ToString();
+                // Lấy giá trị của tham số đầu ra
+                string result = outParam.Value.ToString();
+                return result;
             }
-            return null;
+            return string.Empty;
         }
+        public List<BAN> GetEmptyTables()
+        {
+            var tableInBills = db.HOADONs.Select(itm => itm.maban).ToList();
+            var getEmptyTables = from itm in db.BANs
+                                 where !tableInBills.Contains(itm.maban)
+                                 select itm;
+            return getEmptyTables.ToList();
+        }    
     }
 }

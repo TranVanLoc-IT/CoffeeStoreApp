@@ -67,6 +67,8 @@ namespace CoffeeStoreApp
                     chartIncome.Series["Income"].Points.AddXY(i.Key, i.tongtien);
                     chartIncome.Series["QuantitySold"].Points.AddXY(i.Key, _data.db.CHITIETHDs.Where(itm => itm.mahd == i.mahd.FirstOrDefault()).Select(itm => itm.soluong).Sum());
                 }
+                lbSumOfCfSold.Text = income.Count().ToString();
+                lbTotalIncome.Text = income.Select(itm => itm.tongtien).Sum().ToString();
             }    
         }
     }

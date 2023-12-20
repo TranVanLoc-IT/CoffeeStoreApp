@@ -88,6 +88,7 @@ namespace CoffeeStoreApp
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(152, 27);
             this.cbFilter.TabIndex = 12;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
             // flowLayoutAll
             // 

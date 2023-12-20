@@ -4,6 +4,7 @@
     <EntitySetMapping Name="BANs">
       <EntityTypeMapping TypeName="QL_CAFEModel.BAN">
         <MappingFragment StoreEntitySet="BAN">
+          <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
           <ScalarProperty Name="maban" ColumnName="maban" />
           <ScalarProperty Name="makv" ColumnName="makv" />
           <ScalarProperty Name="tenban" ColumnName="tenban" />
@@ -59,6 +60,7 @@
     <EntitySetMapping Name="HOADONs">
       <EntityTypeMapping TypeName="QL_CAFEModel.HOADON">
         <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="maban" ColumnName="maban" />
           <ScalarProperty Name="mahd" ColumnName="mahd" />
           <ScalarProperty Name="makh" ColumnName="makh" />
           <ScalarProperty Name="manv" ColumnName="manv" />

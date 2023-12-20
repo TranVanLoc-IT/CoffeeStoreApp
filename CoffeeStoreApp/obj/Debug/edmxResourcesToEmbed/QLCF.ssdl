@@ -8,6 +8,7 @@
     <Property Name="makv" Type="char" MaxLength="4" Nullable="false" />
     <Property Name="tenban" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="thuoctinh" Type="nchar" MaxLength="30" />
+    <Property Name="tinhtrang" Type="bit" />
   </EntityType>
   <EntityType Name="CALAMVIEC">
     <Key>
@@ -60,6 +61,7 @@
     <Property Name="mahd" Type="char" MaxLength="6" Nullable="false" />
     <Property Name="makh" Type="char" MaxLength="6" Nullable="false" />
     <Property Name="manv" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="maban" Type="char" MaxLength="4" />
     <Property Name="ngaylap" Type="date" Nullable="false" />
     <Property Name="tongtien" Type="float" Nullable="false" />
     <Property Name="giamgia" Type="money" />
@@ -135,6 +137,18 @@
     <Property Name="maquanly" Type="char" MaxLength="5" />
     <Property Name="phanquyen" Type="nchar" MaxLength="20" />
   </EntityType>
+  <Association Name="fk_maban_from_hd">
+    <End Role="BAN" Type="Self.BAN" Multiplicity="0..1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAN">
+        <PropertyRef Name="maban" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="maban" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_mahd_cthd">
     <End Role="HOADON" Type="Self.HOADON" Multiplicity="1" />
     <End Role="CHITIETHD" Type="Self.CHITIETHD" Multiplicity="*" />
@@ -293,6 +307,10 @@
     <EntitySet Name="LOAIKHACHHANG" EntityType="Self.LOAIKHACHHANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NHACC" EntityType="Self.NHACC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_maban_from_hd" Association="Self.fk_maban_from_hd">
+      <End Role="BAN" EntitySet="BAN" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
     <AssociationSet Name="fk_mahd_cthd" Association="Self.fk_mahd_cthd">
       <End Role="HOADON" EntitySet="HOADON" />
       <End Role="CHITIETHD" EntitySet="CHITIETHD" />

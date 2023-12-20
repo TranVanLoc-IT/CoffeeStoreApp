@@ -14,8 +14,8 @@ namespace CoffeeStoreApp
     public partial class Pay : Form
     {
         private NHANVIEN _nv { get; set; }
-        public HOADON hd { get; set; }
-        public KHACHHANG kh { get; set; }
+        public HOADON hd { get; set; } = new HOADON();
+        public KHACHHANG kh { get; set; } = new KHACHHANG();
 
         private static int _payStep = 1;
 
@@ -103,6 +103,8 @@ namespace CoffeeStoreApp
                     break;
 
                 case 3:
+                    activeForm.Close();
+                    activeForm = null;
                     Btn_Step_Click_Handle(fillBillInfo, e);
                     break;
 
@@ -124,6 +126,7 @@ namespace CoffeeStoreApp
                     isFormClosed = true;
                     cfs = new List<CartDTO>(c.cfs.Count);
                     cfs = c.cfs;
+                    MessageBox.Show(cfs[0].ten, cfs[0].id);
                 }
                 else if (sender is Customer cus)
                 {
@@ -163,13 +166,10 @@ namespace CoffeeStoreApp
                     break;
                 case "fillBillInfo":
                     // object null exception
-                    BillInfo info = new BillInfo();
+                    hd.manv = _nv.manv;
+                    BillInfo info = new BillInfo(hd,kh, cfs);
                     OpenChildForm(info, sender);
                     info.FormClosed += ChildForm_FormClosed;
-                    hd.makh = kh.makh;
-                    info.hd = hd;
-                    info._tenkh = kh.tenkh;
-                    info.cfs = cfs;
                     break;
                 case "success":
                     BillStatus status = new BillStatus();
