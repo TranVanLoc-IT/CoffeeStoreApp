@@ -47,6 +47,7 @@ namespace CoffeeStoreApp
                 table.btnTable.BackColor = System.Drawing.Color.GreenYellow;
                 table.btnTable.Text = ban.tenban + " - " + ban.KHUVUC.tenkv;
                 table.btnTable.Name = ban.maban + ban.KHUVUC.makv;
+                table.btnTable.Click += btnTable_Click;
                 panelTable.Controls.Add(table);
             }    
             if(cfs.Count() > 1)
