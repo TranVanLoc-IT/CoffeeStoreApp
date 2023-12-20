@@ -46,7 +46,7 @@ namespace CoffeeStoreApp
                 TableCard table = new TableCard();
                 table.btnTable.BackColor = System.Drawing.Color.GreenYellow;
                 table.btnTable.Text = ban.tenban + " - " + ban.KHUVUC.tenkv;
-                table.btnTable.Name = ban.maban + ban.KHUVUC.makv;
+                table.btnTable.Name = ban.maban;
                 table.btnTable.Click += btnTable_Click;
                 panelTable.Controls.Add(table);
             }    
@@ -63,6 +63,7 @@ namespace CoffeeStoreApp
             txtVAT.Text = (hd.tongtien * 0.2).ToString("N2");
 
             hd.mahd = data.GenerateBillCode();
+            hd.makh = kh.makh;
             txtBillCode.Text = hd.mahd;
             if(string.IsNullOrEmpty(hd.mahd))
             {
@@ -103,7 +104,7 @@ namespace CoffeeStoreApp
         private void btnBill_Click(object sender, EventArgs e)
         {
             List<CHITIETHD> cthds = new List<CHITIETHD>();
-            hd.maban = maban;
+            hd.maban = maban??string.Empty;
             foreach(var i in cfs)
             {
                 CHITIETHD cthd = new CHITIETHD();
@@ -112,6 +113,11 @@ namespace CoffeeStoreApp
                 cthd.soluong = i.soluong;
                 cthd.thanhtien = decimal.Parse(i.tongtien.ToString());
                 cthds.Add(cthd);
+            }
+            Console.WriteLine($"{hd.mahd}-{hd.manv}-{hd.makh}-{hd.tongtien}-{hd.maban}-{hd.ngaylap}");
+            foreach(var i in cthds)
+            {
+                Console.WriteLine($"{i.mahd}-{i.mahh}-{i.soluong}");
             }    
             if(data.AddBill(hd, cthds))
             {
@@ -137,6 +143,7 @@ namespace CoffeeStoreApp
                     }    
                 }
             }
+            txtTableCode.Text = "";
             maban = string.Empty;
         }
     }

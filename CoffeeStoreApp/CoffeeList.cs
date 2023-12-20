@@ -15,7 +15,7 @@ namespace CoffeeStoreApp
     {
         private Data data = new Data();
         private int _height { get; set; }
-        private static List<HANGHOA> allCfs { get; set; } = new List<HANGHOA>();
+        private static List<CoffeeCard> allCfs { get; set; } = new List<CoffeeCard>();
 
         private NHANVIEN _nv { get; set; }
         public CoffeeList(NHANVIEN nv)
@@ -80,7 +80,7 @@ namespace CoffeeStoreApp
                 card.txtName.Text = itm.tenhh;
                 card.txtPrice.Text = itm.dongia.ToString();
                 card.btnViewProduct.Click += ToDetails;
-                allCfs.Add(itm);
+                allCfs.Add(card);
                 flowLayoutAll.Controls.Add(card);
             }
         }
@@ -105,20 +105,14 @@ namespace CoffeeStoreApp
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             string textSelection = cbFilter.GetItemText(cbFilter.SelectedItem);
-            List<HANGHOA> newListHH = new List<HANGHOA>();
-            newListHH = allCfs.Where(itm => itm.LOAIHANGHOA.tenloai.Equals(textSelection)).ToList();
-            List<CoffeeCard> newListCard = new List<CoffeeCard>();
-            foreach (HANGHOA itm in newListHH)
-            {
-                CoffeeCard card = new CoffeeCard();
-
-                card.txtName.Text = itm.tenhh;
-                card.txtPrice.Text = itm.dongia.ToString();
-                card.btnViewProduct.Click += ToDetails;
-                newListCard.Add(card);
-            }
+            List<string> newListHH = new List<string>();
+            newListHH = data.db.HANGHOAs.Where(itm => itm.LOAIHANGHOA.tenloai.Equals(textSelection)).Select(itm => itm.tenhh).ToList();
             flowLayoutAll.Controls.Clear();
-            flowLayoutAll.Controls.AddRange(newListCard.ToArray());
+            foreach (var card in allCfs)
+            {
+                if(newListHH.Contains(card.txtName.Text))
+                    flowLayoutAll.Controls.Add(card);
+            }
         }
     }
 }

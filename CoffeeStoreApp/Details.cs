@@ -38,6 +38,7 @@ namespace CoffeeStoreApp
 
         private void Details_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("ok", idhh);
             HANGHOA hh = data.db.HANGHOAs.Where(itm => itm.mahh == idhh).FirstOrDefault();
             KIEMKE inventory = data.GetInventoryLatestOfDrinks(idhh);
             // read coffee info 
@@ -46,7 +47,7 @@ namespace CoffeeStoreApp
             var database = client.GetDatabase("CoffeeDB");
 
             var collection = database.GetCollection<CoffeeInfo>("cfi");
-            var resources = collection.Find(Builders<CoffeeInfo>.Filter.Empty).FirstOrDefault();
+            var resources = collection.Find(Builders<CoffeeInfo>.Filter.Eq("_id", idhh)).FirstOrDefault();
             if(resources != null)
             {
                 // do
@@ -61,11 +62,14 @@ namespace CoffeeStoreApp
                 txtName.Text = hh.tenhh;
                 txtPrice.Text = hh.dongia.ToString("N2");
                 txtQuantityLeft.Text = inventory.slconlai.ToString();
-                txtQuantitySold.Text = inventory.sldaban.ToString();
+                txtQuantitySold.Text = "1";
             }
             else
             {
-
+                txtName.Text = hh.tenhh;
+                txtPrice.Text = hh.dongia.ToString("N2");
+                txtQuantityLeft.Text = "Chưa có dữ liệu";
+                txtQuantitySold.Text = "1";
             } 
         }
 

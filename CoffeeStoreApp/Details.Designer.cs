@@ -47,10 +47,10 @@ namespace CoffeeStoreApp
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtDescribe = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTaste = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -127,7 +127,6 @@ namespace CoffeeStoreApp
             // 
             // txtQuantitySold
             // 
-            this.txtQuantitySold.Enabled = false;
             this.txtQuantitySold.Location = new System.Drawing.Point(179, 130);
             this.txtQuantitySold.Name = "txtQuantitySold";
             this.txtQuantitySold.Size = new System.Drawing.Size(85, 28);
@@ -155,7 +154,7 @@ namespace CoffeeStoreApp
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 168);
+            this.label3.Location = new System.Drawing.Point(26, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 24);
             this.label3.TabIndex = 5;
@@ -165,7 +164,7 @@ namespace CoffeeStoreApp
             // txtPrice
             // 
             this.txtPrice.Enabled = false;
-            this.txtPrice.Location = new System.Drawing.Point(107, 164);
+            this.txtPrice.Location = new System.Drawing.Point(107, 172);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(195, 28);
             this.txtPrice.TabIndex = 6;
@@ -191,11 +190,14 @@ namespace CoffeeStoreApp
             // 
             // btnToCart
             // 
+            this.btnToCart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnToCart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
+            this.btnToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToCart.Image = ((System.Drawing.Image)(resources.GetObject("btnToCart.Image")));
             this.btnToCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnToCart.Location = new System.Drawing.Point(817, 178);
+            this.btnToCart.Location = new System.Drawing.Point(817, 161);
             this.btnToCart.Name = "btnToCart";
-            this.btnToCart.Size = new System.Drawing.Size(157, 39);
+            this.btnToCart.Size = new System.Drawing.Size(157, 56);
             this.btnToCart.TabIndex = 7;
             this.btnToCart.Text = "Giỏ hàng";
             this.btnToCart.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,6 +226,7 @@ namespace CoffeeStoreApp
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtTaste);
             this.groupBox2.Controls.Add(this.flowLayoutPanel1);
@@ -232,12 +235,31 @@ namespace CoffeeStoreApp
             this.groupBox2.Controls.Add(this.btnToCart);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(0, 275);
+            this.groupBox2.Location = new System.Drawing.Point(0, 263);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1083, 229);
+            this.groupBox2.Size = new System.Drawing.Size(1083, 258);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin sản phẩm";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(28, 165);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 24);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Hương vị";
+            // 
+            // txtTaste
+            // 
+            this.txtTaste.Enabled = false;
+            this.txtTaste.Location = new System.Drawing.Point(124, 161);
+            this.txtTaste.Multiline = true;
+            this.txtTaste.Name = "txtTaste";
+            this.txtTaste.Size = new System.Drawing.Size(431, 85);
+            this.txtTaste.TabIndex = 19;
             // 
             // flowLayoutPanel1
             // 
@@ -256,30 +278,12 @@ namespace CoffeeStoreApp
             this.label2.TabIndex = 5;
             this.label2.Text = "Đánh giá";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(28, 165);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 24);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Hương vị";
-            // 
-            // txtTaste
-            // 
-            this.txtTaste.Enabled = false;
-            this.txtTaste.Location = new System.Drawing.Point(124, 161);
-            this.txtTaste.Multiline = true;
-            this.txtTaste.Name = "txtTaste";
-            this.txtTaste.Size = new System.Drawing.Size(431, 56);
-            this.txtTaste.TabIndex = 19;
-            // 
             // Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 504);
+            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.ClientSize = new System.Drawing.Size(1083, 521);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);

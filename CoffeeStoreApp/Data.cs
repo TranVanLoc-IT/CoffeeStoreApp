@@ -60,19 +60,21 @@ namespace CoffeeStoreApp
         public bool AddBill(HOADON hd, List<CHITIETHD> cthds)
         {
             if (hd == null) return false;
+            Console.WriteLine("MA NOOOOOOOOOOOOOOO");
             try
             {
-                foreach(var ct in cthds)
+                db.HOADONs.Add(hd);
+                db.Entry<HOADON>(hd).State = System.Data.Entity.EntityState.Added;
+                foreach (var ct in cthds)
                 {
                     db.CHITIETHDs.Add(ct);
                     db.Entry<CHITIETHD>(ct).State = System.Data.Entity.EntityState.Added;
                 }    
-                db.HOADONs.Add(hd);
-                db.Entry<HOADON>(hd).State = System.Data.Entity.EntityState.Added;
                 db.SaveChanges();
             }
             catch (Exception ex)
             {
+                Console.WriteLine("LOIII: " + ex.InnerException);
                 return false;
             }
             return true;

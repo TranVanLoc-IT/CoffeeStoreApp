@@ -58,6 +58,10 @@ namespace CoffeeStoreApp
                 activeForm.Close();
             }
             ActiveButton(sender);
+            if(childForm is BillInfo bill)
+            {
+                bill.kh = kh;
+            }    
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -103,8 +107,6 @@ namespace CoffeeStoreApp
                     break;
 
                 case 3:
-                    activeForm.Close();
-                    activeForm = null;
                     Btn_Step_Click_Handle(fillBillInfo, e);
                     break;
 
@@ -126,7 +128,6 @@ namespace CoffeeStoreApp
                     isFormClosed = true;
                     cfs = new List<CartDTO>(c.cfs.Count);
                     cfs = c.cfs;
-                    MessageBox.Show(cfs[0].ten, cfs[0].id);
                 }
                 else if (sender is Customer cus)
                 {
@@ -182,6 +183,7 @@ namespace CoffeeStoreApp
 
         private void Pay_Load(object sender, EventArgs e)
         {
+            _payStep = 1;
             Btn_Step_Click_Handle(confirmProduct, e);
         }
     }
