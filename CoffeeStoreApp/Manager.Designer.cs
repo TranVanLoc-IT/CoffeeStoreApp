@@ -43,7 +43,7 @@ namespace CoffeeStoreApp
             this.btnPay = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
-            this.btnCart = new System.Windows.Forms.Button();
+            this.btnNV = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
@@ -120,7 +120,7 @@ namespace CoffeeStoreApp
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(93, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 26);
+            this.label1.Size = new System.Drawing.Size(81, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "NV002";
             // 
@@ -223,23 +223,25 @@ namespace CoffeeStoreApp
             this.btnCustomer.Text = "Khách hàng";
             this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
-            // btnCart
+            // btnNV
             // 
-            this.btnCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCart.FlatAppearance.BorderSize = 0;
-            this.btnCart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnCart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
-            this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCart.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCart.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnCart.Location = new System.Drawing.Point(1, 179);
-            this.btnCart.Name = "btnCart";
-            this.btnCart.Size = new System.Drawing.Size(197, 63);
-            this.btnCart.TabIndex = 5;
-            this.btnCart.Text = "Giỏ hàng";
-            this.btnCart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCart.UseVisualStyleBackColor = false;
+            this.btnNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnNV.FlatAppearance.BorderSize = 0;
+            this.btnNV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnNV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.btnNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNV.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNV.ForeColor = System.Drawing.Color.SeaShell;
+            this.btnNV.Location = new System.Drawing.Point(1, 179);
+            this.btnNV.Name = "btnNV";
+            this.btnNV.Size = new System.Drawing.Size(197, 63);
+            this.btnNV.TabIndex = 5;
+            this.btnNV.Text = "Nhân viên";
+            this.btnNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNV.UseVisualStyleBackColor = false;
+            this.btnNV.Click += new System.EventHandler(this.btnNV_Click);
             // 
             // btnView
             // 
@@ -266,7 +268,7 @@ namespace CoffeeStoreApp
             this.panel1.Controls.Add(this.btnPay);
             this.panel1.Controls.Add(this.btnHistory);
             this.panel1.Controls.Add(this.btnCustomer);
-            this.panel1.Controls.Add(this.btnCart);
+            this.panel1.Controls.Add(this.btnNV);
             this.panel1.Controls.Add(this.btnView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -318,7 +320,7 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Button btnHistory;
         private System.Windows.Forms.Button btnCustomer;
-        private System.Windows.Forms.Button btnCart;
+        private System.Windows.Forms.Button btnNV;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel mainPanel;
