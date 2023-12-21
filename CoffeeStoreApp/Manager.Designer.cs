@@ -39,12 +39,12 @@ namespace CoffeeStoreApp
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnStatistic = new System.Windows.Forms.Button();
-            this.btnPay = new System.Windows.Forms.Button();
-            this.btnHistory = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnSalary = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.btnNV = new System.Windows.Forms.Button();
-            this.btnView = new System.Windows.Forms.Button();
+            this.btnSP = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
@@ -120,13 +120,13 @@ namespace CoffeeStoreApp
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(93, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 25);
+            this.label1.Size = new System.Drawing.Size(82, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "NV002";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.BackColor = System.Drawing.Color.Chocolate;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(168, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -156,56 +156,59 @@ namespace CoffeeStoreApp
             this.dateTimePicker1.Size = new System.Drawing.Size(115, 22);
             this.dateTimePicker1.TabIndex = 2;
             // 
-            // btnStatistic
+            // btnImport
             // 
-            this.btnStatistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnStatistic.FlatAppearance.BorderSize = 0;
-            this.btnStatistic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnStatistic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
-            this.btnStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatistic.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatistic.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnStatistic.Location = new System.Drawing.Point(1, 431);
-            this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(197, 63);
-            this.btnStatistic.TabIndex = 9;
-            this.btnStatistic.Text = "Thống kê";
-            this.btnStatistic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistic.UseVisualStyleBackColor = false;
+            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnImport.FlatAppearance.BorderSize = 0;
+            this.btnImport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnImport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImport.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.SeaShell;
+            this.btnImport.Location = new System.Drawing.Point(1, 431);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(197, 63);
+            this.btnImport.TabIndex = 9;
+            this.btnImport.Text = "Nhập hàng";
+            this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnNV_Click);
             // 
-            // btnPay
+            // btnReport
             // 
-            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnPay.FlatAppearance.BorderSize = 0;
-            this.btnPay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnPay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
-            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPay.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnPay.Location = new System.Drawing.Point(1, 305);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(197, 63);
-            this.btnPay.TabIndex = 8;
-            this.btnPay.Text = "Thanh toán";
-            this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPay.UseVisualStyleBackColor = false;
+            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.SeaShell;
+            this.btnReport.Location = new System.Drawing.Point(1, 305);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(197, 63);
+            this.btnReport.TabIndex = 8;
+            this.btnReport.Text = "Báo cáo";
+            this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnNV_Click);
             // 
-            // btnHistory
+            // btnSalary
             // 
-            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnHistory.FlatAppearance.BorderSize = 0;
-            this.btnHistory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
-            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistory.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistory.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnHistory.Location = new System.Drawing.Point(1, 368);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(197, 63);
-            this.btnHistory.TabIndex = 7;
-            this.btnHistory.Text = "Lịch sử đơn hàng";
-            this.btnHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistory.UseVisualStyleBackColor = false;
+            this.btnSalary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnSalary.FlatAppearance.BorderSize = 0;
+            this.btnSalary.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnSalary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.btnSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalary.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalary.ForeColor = System.Drawing.Color.SeaShell;
+            this.btnSalary.Location = new System.Drawing.Point(1, 368);
+            this.btnSalary.Name = "btnSalary";
+            this.btnSalary.Size = new System.Drawing.Size(197, 63);
+            this.btnSalary.TabIndex = 7;
+            this.btnSalary.Text = "Tính lương";
+            this.btnSalary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalary.UseVisualStyleBackColor = false;
+            this.btnSalary.Click += new System.EventHandler(this.btnNV_Click);
             // 
             // btnCustomer
             // 
@@ -223,7 +226,7 @@ namespace CoffeeStoreApp
             this.btnCustomer.Text = "Khách hàng";
             this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCustomer.UseVisualStyleBackColor = false;
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            this.btnCustomer.Click += new System.EventHandler(this.btnNV_Click);
             // 
             // btnNV
             // 
@@ -238,38 +241,39 @@ namespace CoffeeStoreApp
             this.btnNV.Name = "btnNV";
             this.btnNV.Size = new System.Drawing.Size(197, 63);
             this.btnNV.TabIndex = 5;
-            this.btnNV.Text = "Nhân viên";
+            this.btnNV.Text = "Nhân sự";
             this.btnNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNV.UseVisualStyleBackColor = false;
             this.btnNV.Click += new System.EventHandler(this.btnNV_Click);
             // 
-            // btnView
+            // btnSP
             // 
-            this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnView.FlatAppearance.BorderSize = 0;
-            this.btnView.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnView.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnView.Location = new System.Drawing.Point(1, 116);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(197, 63);
-            this.btnView.TabIndex = 0;
-            this.btnView.Text = "Xem sản phẩm";
-            this.btnView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnView.UseVisualStyleBackColor = false;
+            this.btnSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnSP.FlatAppearance.BorderSize = 0;
+            this.btnSP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnSP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.btnSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSP.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSP.ForeColor = System.Drawing.Color.SeaShell;
+            this.btnSP.Location = new System.Drawing.Point(1, 116);
+            this.btnSP.Name = "btnSP";
+            this.btnSP.Size = new System.Drawing.Size(197, 63);
+            this.btnSP.TabIndex = 0;
+            this.btnSP.Text = "Sản phẩm";
+            this.btnSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSP.UseVisualStyleBackColor = false;
+            this.btnSP.Click += new System.EventHandler(this.btnNV_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.btnStatistic);
-            this.panel1.Controls.Add(this.btnPay);
-            this.panel1.Controls.Add(this.btnHistory);
+            this.panel1.Controls.Add(this.btnImport);
+            this.panel1.Controls.Add(this.btnReport);
+            this.panel1.Controls.Add(this.btnSalary);
             this.panel1.Controls.Add(this.btnCustomer);
             this.panel1.Controls.Add(this.btnNV);
-            this.panel1.Controls.Add(this.btnView);
+            this.panel1.Controls.Add(this.btnSP);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -283,6 +287,7 @@ namespace CoffeeStoreApp
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1234, 664);
             this.mainPanel.TabIndex = 5;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // Manager
             // 
@@ -294,6 +299,7 @@ namespace CoffeeStoreApp
             this.Controls.Add(this.mainPanel);
             this.Name = "Manager";
             this.Text = "Manager";
+            this.Load += new System.EventHandler(this.Manager_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -316,12 +322,12 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button btnStatistic;
-        private System.Windows.Forms.Button btnPay;
-        private System.Windows.Forms.Button btnHistory;
+        private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Button btnSalary;
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnNV;
-        private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.Button btnSP;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel mainPanel;
     }

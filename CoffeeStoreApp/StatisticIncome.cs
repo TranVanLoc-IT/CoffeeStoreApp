@@ -31,17 +31,17 @@ namespace CoffeeStoreApp
             chartIncome.ChartAreas.Clear();
             if (txtCfIdOrTypeStatistic.TextLength == 5)
             {
-                cbStatisticTimeOptions.SelectedIndex = 0;
                 var hht = _data.db.CHITIETHDs.Where(itm => itm.mahh == txtCfIdOrTypeStatistic.Text).Select(itm => itm.mahd).ToList();
                 var getMonths = _data.db.HOADONs.Where(itm => hht.Contains(itm.mahd)).Select(itm => itm.ngaylap.Month).ToList();
 
                 cbStatisticTimeOptions.Items.AddRange(getMonths.Distinct().Select(itm => "Tháng " + itm).ToArray());
                 string getOption = cbStatisticTimeOptions.GetItemText(cbStatisticTimeOptions.SelectedItem);
                 int month = DateTime.Now.Month;
+                    MessageBox.Show(getOption.Split(' ')[1], getOption.Split(' ')[1]);
                 if (int.TryParse(getOption.Split(' ')[1], out month))
                 {
-                    // nothing to do
                     MessageBox.Show(getOption.Split(' ')[1], getOption.Split(' ')[1]);
+                    // nothing to do
                     month = int.Parse(getOption.Split(' ')[1]);
                 }
                 var income = from hd in _data.db.HOADONs
@@ -70,6 +70,11 @@ namespace CoffeeStoreApp
                 chartIncome.Series.Add("QuantitySold");
                 // setup
                 chartIncome.Titles.Add("Doanh thu " + _data.db.HANGHOAs.Where(itm => itm.mahh == txtCfIdOrTypeStatistic.Text).Select(itm => itm.tenhh).First() + " tháng: " + month);
+                if(income.Count() > 10)
+                {
+                    chartIncome.Series["Income"].ChartType = SeriesChartType.FastLine;
+                    chartIncome.Series["QuantitySold"].ChartType = SeriesChartType.FastLine;
+                }    
                 foreach (var i in income)
                 {
                     chartIncome.Series["Income"].Points.AddXY(i.Key, i.tongtien);
@@ -84,7 +89,6 @@ namespace CoffeeStoreApp
         {
             if (txtCfIdOrTypeStatistic.TextLength == 5)
             {
-                cbStatisticTimeOptions.SelectedIndex = 0;
                 var hht = _data.db.CHITIETHDs.Where(itm => itm.mahh == txtCfIdOrTypeStatistic.Text).Select(itm => itm.mahd).ToList();
                 var getMonths = _data.db.HOADONs.Where(itm => hht.Contains(itm.mahd)).Select(itm => itm.ngaylap.Month).ToList();
 

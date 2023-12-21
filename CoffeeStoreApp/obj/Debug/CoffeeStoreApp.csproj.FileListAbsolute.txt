@@ -140,3 +140,7 @@ C:\Users\Victus\Desktop\clone\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStor
 C:\Users\Victus\Desktop\clone\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.pdb
 C:\Users\Victus\Desktop\clone\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.KH.resources
 C:\Users\Victus\Desktop\clone\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.NS.resources
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.KH.resources
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.NS.resources
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.BillHandle.resources
+L:\source\repos\CoffeeStoreApp\CoffeeStoreApp\obj\Debug\CoffeeStoreApp.TableHandle.resources

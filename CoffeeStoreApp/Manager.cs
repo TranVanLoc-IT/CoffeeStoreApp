@@ -62,15 +62,47 @@ namespace CoffeeStoreApp
 
         private void btnNV_Click(object sender, EventArgs e)
         {
+            string btnFunction = (sender as Button).Name;
+            switch (btnFunction)
+            {
+                case "btnNV":
+                    NS ns = new NS();
+                    OpenChildForm(ns, sender);
+                    break;
+                case "btnCustomer":
+                    KH kh = new KH();
+                    OpenChildForm(kh, sender);
+                    break;
+                case "btnSP":
 
-            NS ns = new NS();
-            OpenChildForm(ns, sender);
+                    break;
+                case "btnReport":
+
+                    break;
+                case "btnImport":
+                    ManageStorage storage = new ManageStorage();
+                    OpenChildForm(storage, sender);
+                    break;
+                case "btnLogout":
+                    var result = MessageBox.Show("Bạn có muốn kết ca", "Thông báo");
+                    if (result == DialogResult.OK)
+                    {
+
+                        this.Close();
+                    }
+                    break;
+
+            }
         }
 
-        private void btnCustomer_Click(object sender, EventArgs e)
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
-            KH kh = new KH();
-            OpenChildForm(kh, sender);
+
+        }
+
+        private void Manager_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

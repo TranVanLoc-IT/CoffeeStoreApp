@@ -78,12 +78,17 @@ namespace CoffeeStoreApp
                     StatisticIncome sta = new StatisticIncome();
                     OpenChildForm(sta, sender);
                     break;
-                case "btnImport":
-                    ManageStorage storage = new ManageStorage();
-                    OpenChildForm(storage, sender);
+                case "btnTableHandle":
+                    TableHandle table = new TableHandle();
+                    OpenChildForm(table, sender);
                     break;
                 case "btnLogout":
+                    var result = MessageBox.Show("Bạn có muốn kết ca", "Thông báo");
+                    if(result == DialogResult.OK)
+                    {
 
+                        this.Close();
+                    }    
                     break;
 
             }

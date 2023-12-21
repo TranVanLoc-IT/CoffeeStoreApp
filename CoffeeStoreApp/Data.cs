@@ -120,5 +120,9 @@ namespace CoffeeStoreApp
                                  select itm;
             return getEmptyTables.ToList();
         }    
+        public void UpdateTableStatus(string mahd)
+        {
+            int success = db.Database.ExecuteSqlCommand($"exec UpdateTableStatus {mahd}");
+        }
     }
 }

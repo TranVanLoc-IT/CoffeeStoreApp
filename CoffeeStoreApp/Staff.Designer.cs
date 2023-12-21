@@ -37,7 +37,7 @@ namespace CoffeeStoreApp
             this.lbId = new System.Windows.Forms.Label();
             this.btnStatistic = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
-            this.btnImport = new System.Windows.Forms.Button();
+            this.btnTable = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.btnCart = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@ namespace CoffeeStoreApp
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnStatistic);
             this.panel1.Controls.Add(this.btnPay);
-            this.panel1.Controls.Add(this.btnImport);
+            this.panel1.Controls.Add(this.btnTable);
             this.panel1.Controls.Add(this.btnCustomer);
             this.panel1.Controls.Add(this.btnCart);
             this.panel1.Controls.Add(this.btnView);
@@ -122,9 +122,9 @@ namespace CoffeeStoreApp
             this.btnStatistic.ForeColor = System.Drawing.Color.SeaShell;
             this.btnStatistic.Location = new System.Drawing.Point(1, 431);
             this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(197, 63);
+            this.btnStatistic.Size = new System.Drawing.Size(197, 85);
             this.btnStatistic.TabIndex = 9;
-            this.btnStatistic.Text = "Thống kê";
+            this.btnStatistic.Text = "Thống kê doanh thu";
             this.btnStatistic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStatistic.UseVisualStyleBackColor = false;
             this.btnStatistic.Click += new System.EventHandler(this.btnView_Click);
@@ -147,23 +147,23 @@ namespace CoffeeStoreApp
             this.btnPay.UseVisualStyleBackColor = false;
             this.btnPay.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // btnImport
+            // btnTable
             // 
-            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnImport.FlatAppearance.BorderSize = 0;
-            this.btnImport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnImport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
-            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImport.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnImport.Location = new System.Drawing.Point(1, 368);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(197, 63);
-            this.btnImport.TabIndex = 7;
-            this.btnImport.Text = "Quản lí kho hàng";
-            this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImport.UseVisualStyleBackColor = false;
-            this.btnImport.Click += new System.EventHandler(this.btnView_Click);
+            this.btnTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnTable.FlatAppearance.BorderSize = 0;
+            this.btnTable.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnTable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTable.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTable.ForeColor = System.Drawing.Color.SeaShell;
+            this.btnTable.Location = new System.Drawing.Point(1, 368);
+            this.btnTable.Name = "btnTable";
+            this.btnTable.Size = new System.Drawing.Size(197, 63);
+            this.btnTable.TabIndex = 7;
+            this.btnTable.Text = "Bàn ăn";
+            this.btnTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTable.UseVisualStyleBackColor = false;
+            this.btnTable.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnCustomer
             // 
@@ -324,7 +324,7 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button btnPay;
-        private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.Button btnTable;
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnCart;
         private System.Windows.Forms.PictureBox pictureBox1;

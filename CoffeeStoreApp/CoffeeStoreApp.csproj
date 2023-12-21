@@ -125,6 +125,12 @@
     <Compile Include="BAN.cs">
       <DependentUpon>QLCF.tt</DependentUpon>
     </Compile>
+    <Compile Include="BillHandle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BillHandle.Designer.cs">
+      <DependentUpon>BillHandle.cs</DependentUpon>
+    </Compile>
     <Compile Include="BillInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +285,15 @@
     <Compile Include="TableCard.Designer.cs">
       <DependentUpon>TableCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="TableHandle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableHandle.Designer.cs">
+      <DependentUpon>TableHandle.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BillHandle.resx">
+      <DependentUpon>BillHandle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BillInfo.resx">
       <DependentUpon>BillInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TableCard.resx">
       <DependentUpon>TableCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableHandle.resx">
+      <DependentUpon>TableHandle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
