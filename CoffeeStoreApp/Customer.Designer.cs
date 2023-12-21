@@ -34,7 +34,6 @@ namespace CoffeeStoreApp
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnAddCus = new System.Windows.Forms.Button();
             this.btnEditCus = new System.Windows.Forms.Button();
-            this.btnDelCus = new System.Windows.Forms.Button();
             this.panelCusinfo = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.txtCusAddress = new System.Windows.Forms.TextBox();
@@ -74,6 +73,7 @@ namespace CoffeeStoreApp
             this.btnAddCus.Text = "Thêm";
             this.btnAddCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddCus.UseVisualStyleBackColor = false;
+            this.btnAddCus.Click += new System.EventHandler(this.btnEditCus_Click);
             // 
             // btnEditCus
             // 
@@ -94,26 +94,7 @@ namespace CoffeeStoreApp
             this.btnEditCus.Text = "Cập nhật";
             this.btnEditCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditCus.UseVisualStyleBackColor = false;
-            // 
-            // btnDelCus
-            // 
-            this.btnDelCus.AutoSize = true;
-            this.btnDelCus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDelCus.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDelCus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.btnDelCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelCus.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelCus.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnDelCus.Image = ((System.Drawing.Image)(resources.GetObject("btnDelCus.Image")));
-            this.btnDelCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelCus.Location = new System.Drawing.Point(301, 362);
-            this.btnDelCus.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelCus.Name = "btnDelCus";
-            this.btnDelCus.Size = new System.Drawing.Size(114, 53);
-            this.btnDelCus.TabIndex = 66;
-            this.btnDelCus.Text = "Xóa";
-            this.btnDelCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelCus.UseVisualStyleBackColor = false;
+            this.btnEditCus.Click += new System.EventHandler(this.btnEditCus_Click);
             // 
             // panelCusinfo
             // 
@@ -239,6 +220,7 @@ namespace CoffeeStoreApp
             this.txtCusId.Name = "txtCusId";
             this.txtCusId.Size = new System.Drawing.Size(184, 22);
             this.txtCusId.TabIndex = 64;
+            this.txtCusId.TextChanged += new System.EventHandler(this.txtCusId_TextChanged);
             // 
             // label27
             // 
@@ -274,7 +256,6 @@ namespace CoffeeStoreApp
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddCus);
             this.Controls.Add(this.btnEditCus);
-            this.Controls.Add(this.btnDelCus);
             this.Controls.Add(this.panelCusinfo);
             this.Controls.Add(this.txtCusId);
             this.Controls.Add(this.label27);
@@ -294,7 +275,6 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddCus;
         private System.Windows.Forms.Button btnEditCus;
-        private System.Windows.Forms.Button btnDelCus;
         private System.Windows.Forms.Panel panelCusinfo;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtCusAddress;

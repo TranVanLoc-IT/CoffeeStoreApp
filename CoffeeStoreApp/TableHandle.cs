@@ -71,10 +71,10 @@ namespace CoffeeStoreApp
                 ++empty;
                 _data.UpdateTableStatus(handle.btnTable.Name);
             }
-            MessageBox.Show("Tất cả bàn đã trống", "Thông báo");
-            
+            flowLayoutPanel1.Controls.Clear();
             txtEmptyTable.Text = empty.ToString();
             txtTableUsing.Text = inuse.ToString();
+            MessageBox.Show("Tất cả bàn đã trống", "Thông báo");
         }
     }
 }

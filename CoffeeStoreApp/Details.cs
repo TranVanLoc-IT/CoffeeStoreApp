@@ -103,9 +103,10 @@ namespace CoffeeStoreApp
                 });
             }catch(Exception ex)
             {
-                MessageBox.Show("Thông báo", "Thêm món thất bại");
+                MessageBox.Show("Thêm món thất bại", "Thông báo");
             }
-            MessageBox.Show("Thông báo", "Thêm món thành công");
+            MessageBox.Show("Thêm món thành công", "Thông báo");
+            this.Close();
         }
     }
 }

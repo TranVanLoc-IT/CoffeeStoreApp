@@ -31,7 +31,6 @@ namespace CoffeeStoreApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cart));
             this.labelCart = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTotalQuantity = new System.Windows.Forms.TextBox();
@@ -52,24 +51,6 @@ namespace CoffeeStoreApp
             this.labelCart.TabIndex = 10;
             this.labelCart.Text = "Giỏ hàng";
             // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.Firebrick;
-            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(794, 375);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(159, 43);
-            this.btnBack.TabIndex = 80;
-            this.btnBack.Text = "Quay về";
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBack.UseVisualStyleBackColor = false;
-            // 
             // btnPay
             // 
             this.btnPay.BackColor = System.Drawing.Color.SeaGreen;
@@ -80,13 +61,14 @@ namespace CoffeeStoreApp
             this.btnPay.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnPay.Image = ((System.Drawing.Image)(resources.GetObject("btnPay.Image")));
             this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPay.Location = new System.Drawing.Point(607, 377);
+            this.btnPay.Location = new System.Drawing.Point(756, 373);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(177, 43);
             this.btnPay.TabIndex = 79;
             this.btnPay.Text = "Thanh toán";
             this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // label3
             // 
@@ -170,7 +152,6 @@ namespace CoffeeStoreApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1016, 504);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTotalQuantity);
@@ -190,7 +171,6 @@ namespace CoffeeStoreApp
 
         #endregion
         private System.Windows.Forms.Label labelCart;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTotalQuantity;

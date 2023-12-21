@@ -37,7 +37,7 @@ namespace CoffeeStoreApp
             this.lbId = new System.Windows.Forms.Label();
             this.btnStatistic = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
-            this.btnTable = new System.Windows.Forms.Button();
+            this.btnTableHandle = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.btnCart = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@ namespace CoffeeStoreApp
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnStatistic);
             this.panel1.Controls.Add(this.btnPay);
-            this.panel1.Controls.Add(this.btnTable);
+            this.panel1.Controls.Add(this.btnTableHandle);
             this.panel1.Controls.Add(this.btnCustomer);
             this.panel1.Controls.Add(this.btnCart);
             this.panel1.Controls.Add(this.btnView);
@@ -147,23 +147,23 @@ namespace CoffeeStoreApp
             this.btnPay.UseVisualStyleBackColor = false;
             this.btnPay.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // btnTable
+            // btnTableHandle
             // 
-            this.btnTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnTable.FlatAppearance.BorderSize = 0;
-            this.btnTable.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnTable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
-            this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTable.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTable.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnTable.Location = new System.Drawing.Point(1, 368);
-            this.btnTable.Name = "btnTable";
-            this.btnTable.Size = new System.Drawing.Size(197, 63);
-            this.btnTable.TabIndex = 7;
-            this.btnTable.Text = "Bàn ăn";
-            this.btnTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTable.UseVisualStyleBackColor = false;
-            this.btnTable.Click += new System.EventHandler(this.btnView_Click);
+            this.btnTableHandle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnTableHandle.FlatAppearance.BorderSize = 0;
+            this.btnTableHandle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnTableHandle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.btnTableHandle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTableHandle.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTableHandle.ForeColor = System.Drawing.Color.SeaShell;
+            this.btnTableHandle.Location = new System.Drawing.Point(1, 368);
+            this.btnTableHandle.Name = "btnTableHandle";
+            this.btnTableHandle.Size = new System.Drawing.Size(197, 63);
+            this.btnTableHandle.TabIndex = 7;
+            this.btnTableHandle.Text = "Bàn ăn";
+            this.btnTableHandle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTableHandle.UseVisualStyleBackColor = false;
+            this.btnTableHandle.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnCustomer
             // 
@@ -324,7 +324,7 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button btnPay;
-        private System.Windows.Forms.Button btnTable;
+        private System.Windows.Forms.Button btnTableHandle;
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnCart;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -73,7 +73,7 @@ namespace CoffeeStoreApp
             // txtTableUsing
             // 
             this.txtTableUsing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.txtTableUsing.Location = new System.Drawing.Point(232, 140);
+            this.txtTableUsing.Location = new System.Drawing.Point(256, 140);
             this.txtTableUsing.Name = "txtTableUsing";
             this.txtTableUsing.Size = new System.Drawing.Size(100, 32);
             this.txtTableUsing.TabIndex = 2;
@@ -97,7 +97,7 @@ namespace CoffeeStoreApp
             // txtEmptyTable
             // 
             this.txtEmptyTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.txtEmptyTable.Location = new System.Drawing.Point(598, 139);
+            this.txtEmptyTable.Location = new System.Drawing.Point(622, 139);
             this.txtEmptyTable.Name = "txtEmptyTable";
             this.txtEmptyTable.Size = new System.Drawing.Size(100, 32);
             this.txtEmptyTable.TabIndex = 99;
