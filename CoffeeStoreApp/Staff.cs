@@ -23,12 +23,12 @@ namespace CoffeeStoreApp
 
         private void Staff_Load(object sender, EventArgs e)
         {
-
+            lbId.Text = _nv.manv;
         }
         private void ActiveButton(object sender)
         {
             if (currentButton != null)
-                currentButton.BackColor = Color.Red;
+                currentButton.BackColor = Color.FromArgb(128, 64, 0);
             Button btn = sender as Button;
             currentButton = btn;
             btn.BackColor = Color.Chocolate;
@@ -46,6 +46,9 @@ namespace CoffeeStoreApp
             childForm.Dock = DockStyle.Fill;
             this.mainPanel.Controls.Add(childForm);
             this.Height += childForm.Height - this.mainPanel.Height;
+            this.Width += childForm.Width - this.mainPanel.Width;
+            this.Height += 20;
+            this.Width += 20;
             this.mainPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
@@ -57,19 +60,35 @@ namespace CoffeeStoreApp
             {
                 case "btnView":
                     CoffeeList view = new CoffeeList(this._nv);
-                    OpenChildForm(view, sender);
+                    OpenChildForm(view, sender);    
                     break;
                 case "btnCustomer":
+<<<<<<< HEAD
                     //Customer customer = new Customer();
                     //OpenChildForm(customer, sender);
+=======
+                    Customer customer = new Customer(this._nv);
+                    OpenChildForm(customer, sender);
+>>>>>>> a419a1e68aea5648f7664307760934e7a588ec79
                     break;
                 case "btnPay":
                     Pay pay = new Pay(this._nv);
                     OpenChildForm(pay, sender);
                     break;
-                case "btncart":
-                    Cart cart = new Cart();
+                case "btnCart":
+                    Cart cart = new Cart(this._nv);
                     OpenChildForm(cart, sender);
+                    break;
+                case "btnStatistic":
+                    StatisticIncome sta = new StatisticIncome();
+                    OpenChildForm(sta, sender);
+                    break;
+                case "btnImport":
+                    ManageStorage storage = new ManageStorage();
+                    OpenChildForm(storage, sender);
+                    break;
+                case "btnLogout":
+
                     break;
 
             }

@@ -60,19 +60,32 @@ namespace CoffeeStoreApp
             }
         }
 
+<<<<<<< HEAD
         private void Manager_Load(object sender, EventArgs e)
         {
 
+=======
+        private void btnNV_Click(object sender, EventArgs e)
+        {
+
+            NS ns = new NS();
+            OpenChildForm(ns, sender);
+>>>>>>> a419a1e68aea5648f7664307760934e7a588ec79
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
         }
 
         private void btnView_Click_1(object sender, EventArgs e)
         {
 
+=======
+            KH kh = new KH();
+            OpenChildForm(kh, sender);
+>>>>>>> a419a1e68aea5648f7664307760934e7a588ec79
         }
     }
 }

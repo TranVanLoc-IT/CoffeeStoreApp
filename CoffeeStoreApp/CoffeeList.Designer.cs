@@ -78,11 +78,12 @@ namespace CoffeeStoreApp
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Sienna;
             this.label2.Location = new System.Drawing.Point(7, 438);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 26);
+            this.label2.Size = new System.Drawing.Size(198, 26);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Chọn Thức Uống";
+            this.label2.Text = "Chọn Loại Cà phê";
             // 
             // cbFilter
             // 
@@ -90,15 +91,11 @@ namespace CoffeeStoreApp
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cbFilter.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilter.FormattingEnabled = true;
-            this.cbFilter.Items.AddRange(new object[] {
-            "Xe tay côn",
-            "Xe mô tô",
-            "Xe số",
-            "Xe tay ga"});
             this.cbFilter.Location = new System.Drawing.Point(232, 437);
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(152, 27);
             this.cbFilter.TabIndex = 12;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
             // flowLayoutAll
             // 
@@ -119,12 +116,14 @@ namespace CoffeeStoreApp
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Sienna;
             this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(198, 26);
+            this.label3.Size = new System.Drawing.Size(161, 26);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Thức uống nổi bật";
+            this.label3.Text = "Cà phê nổi bật";
             // 
             // groupBox2
             // 

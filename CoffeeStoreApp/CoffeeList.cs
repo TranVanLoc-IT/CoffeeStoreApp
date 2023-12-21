@@ -93,34 +93,26 @@ namespace CoffeeStoreApp
             Details specs = new Details(_nv, cpns[1], 0);
             specs.ShowDialog();
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int index = cbFilter.SelectedIndex;
-            List<CoffeeCard> newListCard = new List<CoffeeCard>();
-            if (index == 0)
-            {
-
-            }
-            else if (index == 1)
-            {
-              
-            }
-            else if (index == 2)
-            {
-               
-            }
-            else
-            {
-              
-            }
-            flowLayoutAll.Controls.Clear();
-            flowLayoutAll.Controls.AddRange(newListCard.ToArray());
-        }
+      
 
         private void CoffeeList_Load(object sender, EventArgs e)
         {
+            cbFilter.Items.AddRange(data.db.LOAIHANGHOAs.Select(itm => itm.tenloai).Distinct().ToArray());
             LoadHotCfs();
             LoadAllCfs();
+        }
+
+        private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string textSelection = cbFilter.GetItemText(cbFilter.SelectedItem);
+            List<string> newListHH = new List<string>();
+            newListHH = data.db.HANGHOAs.Where(itm => itm.LOAIHANGHOA.tenloai.Equals(textSelection)).Select(itm => itm.tenhh).ToList();
+            flowLayoutAll.Controls.Clear();
+            foreach (var card in allCfs)
+            {
+                if(newListHH.Contains(card.txtName.Text))
+                    flowLayoutAll.Controls.Add(card);
+            }
         }
     }
 }

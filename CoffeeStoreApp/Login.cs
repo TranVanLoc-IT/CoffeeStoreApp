@@ -53,7 +53,6 @@ namespace CoffeeStoreApp
                 NHANVIEN nv = userList.Where(i => i.manv == idInp && i.matkhau == passInp).FirstOrDefault();
                 if (nv != null)
                 {
-                    MessageBox.Show("Thông báo", "Đăng nhập thành công");
                     if(userList.Select(itm => itm.maquanly).Contains(nv.manv))
                     {
                         // quản lý
@@ -70,7 +69,7 @@ namespace CoffeeStoreApp
                 }
                 else
                 {
-                    MessageBox.Show("Thông báo", "Đăng nhập thất bại");
+                    MessageBox.Show("Đăng nhập thất bại", "Thông báo");
                 }
             }    
         }

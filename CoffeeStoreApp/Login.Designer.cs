@@ -55,7 +55,7 @@ namespace CoffeeStoreApp
             // 
             this.txtUserId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserId.Location = new System.Drawing.Point(487, 176);
-            this.txtUserId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserId.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserId.MaxLength = 5;
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.Size = new System.Drawing.Size(124, 27);
@@ -69,10 +69,10 @@ namespace CoffeeStoreApp
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogin.Location = new System.Drawing.Point(567, 321);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(132, 46);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -88,7 +88,7 @@ namespace CoffeeStoreApp
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(178, 27);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TabIndex = 2;
             // 
             // label2
             // 
@@ -121,7 +121,7 @@ namespace CoffeeStoreApp
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

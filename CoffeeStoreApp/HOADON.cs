@@ -26,10 +26,12 @@ namespace CoffeeStoreApp
         public System.DateTime ngaylap { get; set; }
         public double tongtien { get; set; }
         public Nullable<decimal> giamgia { get; set; }
+        public string maban { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETHD> CHITIETHDs { get; set; }
         public virtual KHACHHANG KHACHHANG { get; set; }
         public virtual NHANVIEN NHANVIEN { get; set; }
+        public virtual BAN BAN { get; set; }
     }
 }

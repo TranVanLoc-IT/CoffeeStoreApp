@@ -9,6 +9,8 @@
     <Property Name="tenban" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="thuoctinh" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
     <NavigationProperty Name="KHUVUC" Relationship="Self.fk_makv_ban" FromRole="BAN" ToRole="KHUVUC" />
+    <Property Name="tinhtrang" Type="Boolean" />
+    <NavigationProperty Name="HOADONs" Relationship="QL_CAFEModel.fk_maban_from_hd" FromRole="BAN" ToRole="HOADON" />
   </EntityType>
   <EntityType Name="CALAMVIEC">
     <Key>
@@ -76,6 +78,8 @@
     <NavigationProperty Name="CHITIETHDs" Relationship="Self.fk_mahd_cthd" FromRole="HOADON" ToRole="CHITIETHD" />
     <NavigationProperty Name="KHACHHANG" Relationship="Self.fk_makh_from_hd" FromRole="HOADON" ToRole="KHACHHANG" />
     <NavigationProperty Name="NHANVIEN" Relationship="Self.fk_manv_from_hd" FromRole="HOADON" ToRole="NHANVIEN" />
+    <Property Name="maban" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="BAN" Relationship="QL_CAFEModel.fk_maban_from_hd" FromRole="HOADON" ToRole="BAN" />
   </EntityType>
   <EntityType Name="KHACHHANG">
     <Key>
@@ -365,5 +369,21 @@
       <End Role="NHANVIEN" EntitySet="NHANVIENs" />
       <End Role="NHANVIEN1" EntitySet="NHANVIENs" />
     </AssociationSet>
+    <AssociationSet Name="fk_maban_from_hd" Association="QL_CAFEModel.fk_maban_from_hd">
+      <End Role="BAN" EntitySet="BANs" />
+      <End Role="HOADON" EntitySet="HOADONs" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="fk_maban_from_hd">
+    <End Type="QL_CAFEModel.BAN" Role="BAN" Multiplicity="0..1" />
+    <End Type="QL_CAFEModel.HOADON" Role="HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAN">
+        <PropertyRef Name="maban" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="maban" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
