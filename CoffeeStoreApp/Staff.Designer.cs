@@ -289,6 +289,7 @@ namespace CoffeeStoreApp
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(200, 113);
             this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(20);
             this.mainPanel.Size = new System.Drawing.Size(1034, 551);
             this.mainPanel.TabIndex = 2;
             // 
@@ -302,6 +303,7 @@ namespace CoffeeStoreApp
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Staff";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staff";
             this.Load += new System.EventHandler(this.Staff_Load);
             this.panel1.ResumeLayout(false);

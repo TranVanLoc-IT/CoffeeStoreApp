@@ -318,7 +318,6 @@
     <EmbeddedResource Include="TableCard.resx">
       <DependentUpon>TableCard.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataDetails.json" />
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
     <None Include="packages.config" />

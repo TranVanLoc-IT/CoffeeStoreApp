@@ -18,6 +18,8 @@ namespace CoffeeStoreApp
 
         private Data data = new Data();
 
+        public int flag { get; set; } = 0;
+
         public Customer(NHANVIEN nv)
         {
             this._nv = nv;
@@ -32,7 +34,7 @@ namespace CoffeeStoreApp
         private bool CheckFullInfo()
         {
             errorProvider1.Clear();
-            foreach(var control in grInfo.Controls)
+            foreach(var control in this.Controls)
             {
                 if(control is TextBox t)
                 {
@@ -42,8 +44,8 @@ namespace CoffeeStoreApp
                         return false;
                     }    
                 }    
-            }    
-
+            }
+            flag = 1;
             return true;
         }
         private void btnEditCus_Click(object sender, EventArgs e)

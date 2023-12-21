@@ -30,84 +30,27 @@ namespace CoffeeStoreApp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cart));
+            this.labelCart = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnPay = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTotalQuantity = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTotalMoney = new System.Windows.Forms.TextBox();
             this.dataGridViewCart = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnPay = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label3
+            // labelCart
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 374);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 25);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Số lượng:";
-            // 
-            // txtTotalQuantity
-            // 
-            this.txtTotalQuantity.Enabled = false;
-            this.txtTotalQuantity.Location = new System.Drawing.Point(159, 369);
-            this.txtTotalQuantity.Name = "txtTotalQuantity";
-            this.txtTotalQuantity.Size = new System.Drawing.Size(47, 30);
-            this.txtTotalQuantity.TabIndex = 13;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(220, 374);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 25);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Tổng thanh toán:";
-            // 
-            // txtTotalMoney
-            // 
-            this.txtTotalMoney.Enabled = false;
-            this.txtTotalMoney.Location = new System.Drawing.Point(393, 369);
-            this.txtTotalMoney.Name = "txtTotalMoney";
-            this.txtTotalMoney.Size = new System.Drawing.Size(189, 30);
-            this.txtTotalMoney.TabIndex = 11;
-            // 
-            // dataGridViewCart
-            // 
-            this.dataGridViewCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCart.Location = new System.Drawing.Point(49, 66);
-            this.dataGridViewCart.Name = "dataGridViewCart";
-            this.dataGridViewCart.RowHeadersWidth = 51;
-            this.dataGridViewCart.RowTemplate.Height = 24;
-            this.dataGridViewCart.Size = new System.Drawing.Size(647, 283);
-            this.dataGridViewCart.TabIndex = 9;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Snow;
-            this.groupBox1.Controls.Add(this.btnBack);
-            this.groupBox1.Controls.Add(this.btnPay);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtTotalQuantity);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtTotalMoney);
-            this.groupBox1.Controls.Add(this.dataGridViewCart);
-            this.groupBox1.Controls.Add(this.btnRemove);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(46, 72);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(943, 417);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin giỏ hàng";
+            this.labelCart.AutoSize = true;
+            this.labelCart.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCart.Location = new System.Drawing.Point(27, 15);
+            this.labelCart.Name = "labelCart";
+            this.labelCart.Size = new System.Drawing.Size(126, 32);
+            this.labelCart.TabIndex = 10;
+            this.labelCart.Text = "Giỏ hàng";
             // 
             // btnBack
             // 
@@ -119,10 +62,10 @@ namespace CoffeeStoreApp
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(778, 356);
+            this.btnBack.Location = new System.Drawing.Point(794, 375);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(159, 43);
-            this.btnBack.TabIndex = 72;
+            this.btnBack.TabIndex = 80;
             this.btnBack.Text = "Quay về";
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBack.UseVisualStyleBackColor = false;
@@ -137,17 +80,75 @@ namespace CoffeeStoreApp
             this.btnPay.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnPay.Image = ((System.Drawing.Image)(resources.GetObject("btnPay.Image")));
             this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPay.Location = new System.Drawing.Point(591, 358);
+            this.btnPay.Location = new System.Drawing.Point(607, 377);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(177, 43);
-            this.btnPay.TabIndex = 71;
+            this.btnPay.TabIndex = 79;
             this.btnPay.Text = "Thanh toán";
             this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPay.UseVisualStyleBackColor = false;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label3.Location = new System.Drawing.Point(64, 393);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 24);
+            this.label3.TabIndex = 78;
+            this.label3.Text = "Số lượng:";
+            // 
+            // txtTotalQuantity
+            // 
+            this.txtTotalQuantity.Enabled = false;
+            this.txtTotalQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.txtTotalQuantity.Location = new System.Drawing.Point(175, 388);
+            this.txtTotalQuantity.Name = "txtTotalQuantity";
+            this.txtTotalQuantity.Size = new System.Drawing.Size(47, 28);
+            this.txtTotalQuantity.TabIndex = 77;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label2.Location = new System.Drawing.Point(236, 393);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(153, 24);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "Tổng thanh toán:";
+            // 
+            // txtTotalMoney
+            // 
+            this.txtTotalMoney.Enabled = false;
+            this.txtTotalMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.txtTotalMoney.Location = new System.Drawing.Point(395, 388);
+            this.txtTotalMoney.Name = "txtTotalMoney";
+            this.txtTotalMoney.Size = new System.Drawing.Size(203, 28);
+            this.txtTotalMoney.TabIndex = 75;
+            // 
+            // dataGridViewCart
+            // 
+            this.dataGridViewCart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCart.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewCart.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dataGridViewCart.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewCart.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dataGridViewCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCart.GridColor = System.Drawing.Color.SandyBrown;
+            this.dataGridViewCart.Location = new System.Drawing.Point(65, 85);
+            this.dataGridViewCart.Name = "dataGridViewCart";
+            this.dataGridViewCart.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridViewCart.RowHeadersWidth = 51;
+            this.dataGridViewCart.RowTemplate.Height = 24;
+            this.dataGridViewCart.Size = new System.Drawing.Size(676, 283);
+            this.dataGridViewCart.TabIndex = 74;
             // 
             // btnRemove
             // 
+            this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -155,24 +156,13 @@ namespace CoffeeStoreApp
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
             this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemove.Location = new System.Drawing.Point(740, 90);
+            this.btnRemove.Location = new System.Drawing.Point(756, 109);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(123, 43);
-            this.btnRemove.TabIndex = 1;
+            this.btnRemove.TabIndex = 73;
             this.btnRemove.Text = "Xóa ";
             this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 32);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Giỏ hàng";
             // 
             // Cart
             // 
@@ -180,30 +170,33 @@ namespace CoffeeStoreApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1016, 504);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnPay);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtTotalQuantity);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtTotalMoney);
+            this.Controls.Add(this.dataGridViewCart);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.labelCart);
             this.Name = "Cart";
             this.Text = "Cart";
             this.Load += new System.EventHandler(this.Cart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Label labelCart;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTotalQuantity;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTotalMoney;
         private System.Windows.Forms.DataGridView dataGridViewCart;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnPay;
     }
 }

@@ -215,7 +215,8 @@ namespace CoffeeStoreApp
             // 
             // txtDescribe
             // 
-            this.txtDescribe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescribe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtDescribe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescribe.Enabled = false;
             this.txtDescribe.Location = new System.Drawing.Point(28, 41);
             this.txtDescribe.Name = "txtDescribe";
@@ -254,6 +255,7 @@ namespace CoffeeStoreApp
             // 
             // txtTaste
             // 
+            this.txtTaste.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtTaste.Enabled = false;
             this.txtTaste.Location = new System.Drawing.Point(124, 161);
             this.txtTaste.Multiline = true;
@@ -263,9 +265,9 @@ namespace CoffeeStoreApp
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(678, 53);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(700, 50);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(249, 45);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 45);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // label2

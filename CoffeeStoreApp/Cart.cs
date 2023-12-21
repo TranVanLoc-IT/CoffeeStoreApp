@@ -15,6 +15,7 @@ namespace CoffeeStoreApp
     {
         private NHANVIEN _nv { get; set; }
         public List<CartDTO> cfs { get; set; }
+        public int flag { get; set; }
         public Cart(NHANVIEN nv)
         {
             this._nv = nv;
@@ -30,16 +31,26 @@ namespace CoffeeStoreApp
             var resource = collection.Find(Builders<CartDTO>.Filter.Empty).ToList(); // NO CONDITION
             int quantity = 0;
             double money = 0;
-            foreach(var i in resource)
+            if(resource.Count != 0)
             {
-                quantity += i.soluong;
-                money += i.tongtien;
+                labelCart.Text += $" Chưa có {resource.Select(itm => itm.soluong).Sum()} sản phẩm!!";
+                foreach (var i in resource)
+                {
+                    quantity += i.soluong;
+                    money += i.tongtien;
+                }
+                txtTotalQuantity.Text = quantity.ToString();
+                txtTotalMoney.Text = money.ToString();
+                cfs = new List<CartDTO>(resource.Count);
+                cfs = resource;
+                dataGridViewCart.DataSource = resource;
+                flag = 1;
             }
-            txtTotalQuantity.Text = quantity.ToString();
-            txtTotalMoney.Text = money.ToString();
-            cfs = new List<CartDTO>(resource.Count);
-            cfs = resource;
-            dataGridViewCart.DataSource = resource;
+            else
+            {
+                labelCart.Text += $" Chưa có sản phẩm nào!!";
+                flag = 0;
+            }
         }
 
 

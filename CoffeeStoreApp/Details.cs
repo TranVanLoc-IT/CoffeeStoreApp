@@ -38,7 +38,6 @@ namespace CoffeeStoreApp
 
         private void Details_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("ok", idhh);
             HANGHOA hh = data.db.HANGHOAs.Where(itm => itm.mahh == idhh).FirstOrDefault();
             KIEMKE inventory = data.GetInventoryLatestOfDrinks(idhh);
             // read coffee info 
@@ -63,6 +62,17 @@ namespace CoffeeStoreApp
                 txtPrice.Text = hh.dongia.ToString("N2");
                 txtQuantityLeft.Text = inventory.slconlai.ToString();
                 txtQuantitySold.Text = "1";
+
+                int star = inventory.sldaban??0;
+                star = (50 / 5)/2;
+                while(star != 0)
+                {
+                    PictureBox pic = new PictureBox();
+                    pic.Width = 50;
+                    pic.Height = 45;
+                    pic.Image = Image.FromStream(new FileStream("../../Images/icons/star.png", FileMode.Open));
+                    flowLayoutPanel1.Controls.Add(pic);
+                }    
             }
             else
             {

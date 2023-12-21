@@ -17,6 +17,7 @@ namespace CoffeeStoreApp
         
         public List<CartDTO> cfs { get; set; }
 
+        public int flag { get; set; }
         public KHACHHANG kh { get; set; }
 
         public BillInfo(HOADON hd,KHACHHANG kh, List<CartDTO> cfs)
@@ -104,7 +105,10 @@ namespace CoffeeStoreApp
         private void btnBill_Click(object sender, EventArgs e)
         {
             List<CHITIETHD> cthds = new List<CHITIETHD>();
-            hd.maban = maban??string.Empty;
+            if(!string.IsNullOrEmpty(maban))
+            {
+                hd.maban = maban;
+            }    
             foreach(var i in cfs)
             {
                 CHITIETHD cthd = new CHITIETHD();
@@ -122,6 +126,7 @@ namespace CoffeeStoreApp
             if(data.AddBill(hd, cthds))
             {
                 MessageBox.Show("Thanh toán Thành công", "Thông báo");
+                flag = 1;
                 ClearCart();
             }
             else

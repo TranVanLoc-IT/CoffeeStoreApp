@@ -23,7 +23,7 @@ namespace CoffeeStoreApp
 
         private void Staff_Load(object sender, EventArgs e)
         {
-
+            lbId.Text = _nv.manv;
         }
         private void ActiveButton(object sender)
         {
@@ -47,6 +47,8 @@ namespace CoffeeStoreApp
             this.mainPanel.Controls.Add(childForm);
             this.Height += childForm.Height - this.mainPanel.Height;
             this.Width += childForm.Width - this.mainPanel.Width;
+            this.Height += 20;
+            this.Width += 20;
             this.mainPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
@@ -79,6 +81,9 @@ namespace CoffeeStoreApp
                 case "btnImport":
                     ManageStorage storage = new ManageStorage();
                     OpenChildForm(storage, sender);
+                    break;
+                case "btnLogout":
+
                     break;
 
             }

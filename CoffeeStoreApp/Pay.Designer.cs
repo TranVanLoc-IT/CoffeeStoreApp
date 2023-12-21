@@ -44,6 +44,8 @@ namespace CoffeeStoreApp
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.success);
             this.panel1.Controls.Add(this.fillBillInfo);
             this.panel1.Controls.Add(this.fillCustomerInfo);
@@ -115,6 +117,7 @@ namespace CoffeeStoreApp
             // 
             // confirmProduct_NextStep
             // 
+            this.confirmProduct_NextStep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.confirmProduct_NextStep.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.confirmProduct_NextStep.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.confirmProduct_NextStep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -132,6 +135,8 @@ namespace CoffeeStoreApp
             // 
             // mainPanel
             // 
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.Location = new System.Drawing.Point(1, 169);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1013, 279);
@@ -139,6 +144,7 @@ namespace CoffeeStoreApp
             // 
             // btnReturn
             // 
+            this.btnReturn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReturn.AutoSize = true;
             this.btnReturn.BackColor = System.Drawing.Color.Transparent;
             this.btnReturn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));

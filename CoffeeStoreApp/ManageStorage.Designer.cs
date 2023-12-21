@@ -285,6 +285,7 @@ namespace CoffeeStoreApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewImp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewImp.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewImp.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewImp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewImp.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dataGridViewImp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -299,6 +300,7 @@ namespace CoffeeStoreApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(982, 553);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panelInfo);
