@@ -181,6 +181,12 @@
     </Compile>
     <Compile Include="HistoryBills.cs" />
     <Compile Include="ImagePath.cs" />
+    <Compile Include="KH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KH.Designer.cs">
+      <DependentUpon>KH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,12 @@
     </Compile>
     <Compile Include="NHANVIEN.cs">
       <DependentUpon>QLCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NS.Designer.cs">
+      <DependentUpon>NS.cs</DependentUpon>
     </Compile>
     <Compile Include="Pay.cs">
       <SubType>Form</SubType>
@@ -288,6 +300,9 @@
     <EmbeddedResource Include="Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KH.resx">
+      <DependentUpon>KH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageStorage.resx">
       <DependentUpon>ManageStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NS.resx">
+      <DependentUpon>NS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pay.resx">
       <DependentUpon>Pay.cs</DependentUpon>
