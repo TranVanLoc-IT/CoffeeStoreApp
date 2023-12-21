@@ -21,10 +21,7 @@ namespace CoffeeStoreApp
 
         private void StatisticIncome_Load(object sender, EventArgs e)
         {
-            cbStatisticTimeOptions.SelectedIndex = 0;
-            var getMonths = _data.db.HOADONs.Select(itm => itm.ngaylap.Month).ToList();
-
-            cbStatisticTimeOptions.Items.AddRange(getMonths.Distinct().Select(itm => "Tháng " + itm).ToArray());
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,11 +31,18 @@ namespace CoffeeStoreApp
             chartIncome.ChartAreas.Clear();
             if (txtCfIdOrTypeStatistic.TextLength == 5)
             {
+                cbStatisticTimeOptions.SelectedIndex = 0;
+                var hht = _data.db.CHITIETHDs.Where(itm => itm.mahh == txtCfIdOrTypeStatistic.Text).Select(itm => itm.mahd).ToList();
+                var getMonths = _data.db.HOADONs.Where(itm => hht.Contains(itm.mahd)).Select(itm => itm.ngaylap.Month).ToList();
+
+                cbStatisticTimeOptions.Items.AddRange(getMonths.Distinct().Select(itm => "Tháng " + itm).ToArray());
                 string getOption = cbStatisticTimeOptions.GetItemText(cbStatisticTimeOptions.SelectedItem);
                 int month = DateTime.Now.Month;
                 if (int.TryParse(getOption.Split(' ')[1], out month))
                 {
                     // nothing to do
+                    MessageBox.Show(getOption.Split(' ')[1], getOption.Split(' ')[1]);
+                    month = int.Parse(getOption.Split(' ')[1]);
                 }
                 var income = from hd in _data.db.HOADONs
                              join cthd in _data.db.CHITIETHDs
@@ -50,6 +54,10 @@ namespace CoffeeStoreApp
                              group hd by hd.ngaylap
                              into gr
                              select new { Key = gr.Key, tongtien = gr.Sum(itm => itm.tongtien), mahd = gr.Select(itm => itm.mahd) };
+                if(income == null)
+                {
+                    MessageBox.Show("Không có dữ liệu hiển thị!", "Lỗi");
+                }    
                 ChartArea area = new ChartArea();
                 area.AxisX.Title = "Thời gian";
                 area.AxisY.Title = "Doanh thu";
@@ -68,8 +76,20 @@ namespace CoffeeStoreApp
                     chartIncome.Series["QuantitySold"].Points.AddXY(i.Key, _data.db.CHITIETHDs.Where(itm => itm.mahd == i.mahd.FirstOrDefault()).Select(itm => itm.soluong).Sum());
                 }
                 lbSumOfCfSold.Text = income.Count().ToString();
-                lbTotalIncome.Text = income.Select(itm => itm.tongtien).Sum().ToString();
+                lbTotalIncome.Text = income.Select(itm => itm.tongtien)?.Sum().ToString();
             }    
+        }
+
+        private void txtCfIdOrTypeStatistic_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCfIdOrTypeStatistic.TextLength == 5)
+            {
+                cbStatisticTimeOptions.SelectedIndex = 0;
+                var hht = _data.db.CHITIETHDs.Where(itm => itm.mahh == txtCfIdOrTypeStatistic.Text).Select(itm => itm.mahd).ToList();
+                var getMonths = _data.db.HOADONs.Where(itm => hht.Contains(itm.mahd)).Select(itm => itm.ngaylap.Month).ToList();
+
+                cbStatisticTimeOptions.Items.AddRange(getMonths.Distinct().Select(itm => "Tháng " + itm).ToArray());
+            }
         }
     }
 }
