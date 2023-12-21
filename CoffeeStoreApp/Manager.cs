@@ -64,5 +64,15 @@ namespace CoffeeStoreApp
         {
 
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnView_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

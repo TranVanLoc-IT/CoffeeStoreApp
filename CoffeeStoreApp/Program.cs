@@ -16,7 +16,9 @@ namespace CoffeeStoreApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Staff(new NHANVIEN()));
+            //Application.Run(new Staff(new CoffeeList()));
+            //Application.Run(new CoffeeList()); 
+            Application.Run(new FormQLKhachHang()) ; 
         }
     }
 }

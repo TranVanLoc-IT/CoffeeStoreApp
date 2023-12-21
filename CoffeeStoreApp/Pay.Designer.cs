@@ -47,20 +47,18 @@ namespace CoffeeStoreApp
             this.panel1.Controls.Add(this.fillBillInfo);
             this.panel1.Controls.Add(this.fillCustomerInfo);
             this.panel1.Controls.Add(this.confirmProduct);
-            this.panel1.Location = new System.Drawing.Point(1, 111);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(1, 89);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1140, 92);
+            this.panel1.Size = new System.Drawing.Size(1013, 74);
             this.panel1.TabIndex = 0;
             // 
             // success
             // 
             this.success.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.success.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.success.Location = new System.Drawing.Point(853, 0);
-            this.success.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.success.Location = new System.Drawing.Point(758, 0);
             this.success.Name = "success";
-            this.success.Size = new System.Drawing.Size(285, 92);
+            this.success.Size = new System.Drawing.Size(253, 74);
             this.success.TabIndex = 3;
             this.success.Text = "Hoàn tất";
             this.success.UseVisualStyleBackColor = true;
@@ -69,10 +67,9 @@ namespace CoffeeStoreApp
             // 
             this.fillBillInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fillBillInfo.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.fillBillInfo.Location = new System.Drawing.Point(568, 0);
-            this.fillBillInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.fillBillInfo.Location = new System.Drawing.Point(505, 0);
             this.fillBillInfo.Name = "fillBillInfo";
-            this.fillBillInfo.Size = new System.Drawing.Size(285, 92);
+            this.fillBillInfo.Size = new System.Drawing.Size(253, 74);
             this.fillBillInfo.TabIndex = 2;
             this.fillBillInfo.Text = "Thông tin hóa đơn";
             this.fillBillInfo.UseVisualStyleBackColor = true;
@@ -81,10 +78,9 @@ namespace CoffeeStoreApp
             // 
             this.fillCustomerInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fillCustomerInfo.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.fillCustomerInfo.Location = new System.Drawing.Point(285, 0);
-            this.fillCustomerInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.fillCustomerInfo.Location = new System.Drawing.Point(253, 0);
             this.fillCustomerInfo.Name = "fillCustomerInfo";
-            this.fillCustomerInfo.Size = new System.Drawing.Size(285, 92);
+            this.fillCustomerInfo.Size = new System.Drawing.Size(253, 74);
             this.fillCustomerInfo.TabIndex = 1;
             this.fillCustomerInfo.Text = "Thông tin khách hàng";
             this.fillCustomerInfo.UseVisualStyleBackColor = true;
@@ -95,9 +91,8 @@ namespace CoffeeStoreApp
             this.confirmProduct.Image = ((System.Drawing.Image)(resources.GetObject("confirmProduct.Image")));
             this.confirmProduct.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.confirmProduct.Location = new System.Drawing.Point(0, 0);
-            this.confirmProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.confirmProduct.Name = "confirmProduct";
-            this.confirmProduct.Size = new System.Drawing.Size(285, 92);
+            this.confirmProduct.Size = new System.Drawing.Size(253, 74);
             this.confirmProduct.TabIndex = 0;
             this.confirmProduct.Text = "Xác nhận giỏ hàng";
             this.confirmProduct.UseVisualStyleBackColor = true;
@@ -113,8 +108,8 @@ namespace CoffeeStoreApp
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(382, 25, 338, 25);
-            this.label1.Size = new System.Drawing.Size(1158, 96);
+            this.label1.Padding = new System.Windows.Forms.Padding(340, 20, 300, 20);
+            this.label1.Size = new System.Drawing.Size(1014, 79);
             this.label1.TabIndex = 1;
             this.label1.Text = "Thanh toán";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -127,10 +122,9 @@ namespace CoffeeStoreApp
             this.confirmProduct_NextStep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmProduct_NextStep.Image = ((System.Drawing.Image)(resources.GetObject("confirmProduct_NextStep.Image")));
             this.confirmProduct_NextStep.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.confirmProduct_NextStep.Location = new System.Drawing.Point(954, 568);
-            this.confirmProduct_NextStep.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.confirmProduct_NextStep.Location = new System.Drawing.Point(848, 454);
             this.confirmProduct_NextStep.Name = "confirmProduct_NextStep";
-            this.confirmProduct_NextStep.Size = new System.Drawing.Size(159, 54);
+            this.confirmProduct_NextStep.Size = new System.Drawing.Size(141, 43);
             this.confirmProduct_NextStep.TabIndex = 70;
             this.confirmProduct_NextStep.Text = "Tiếp tục";
             this.confirmProduct_NextStep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,24 +133,23 @@ namespace CoffeeStoreApp
             // 
             // mainPanel
             // 
-            this.mainPanel.Location = new System.Drawing.Point(1, 211);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mainPanel.Location = new System.Drawing.Point(1, 169);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1140, 349);
+            this.mainPanel.Size = new System.Drawing.Size(1013, 279);
             this.mainPanel.TabIndex = 71;
             // 
             // Pay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 630);
+            this.ClientSize = new System.Drawing.Size(1016, 504);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.confirmProduct_NextStep);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Pay";
             this.Text = "Pay";
+            this.Load += new System.EventHandler(this.Pay_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

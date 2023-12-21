@@ -15,10 +15,10 @@ namespace CoffeeStoreApp
     public partial class KHACHHANG
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public KHACHHANG()
-        {
-            this.HOADONs = new HashSet<HOADON>();
-        }
+        //public KHACHHANG()
+        //{
+        //    this.HOADONs = new HashSet<HOADON>();
+        //}
     
         public string makh { get; set; }
         public string tenkh { get; set; }
@@ -28,8 +28,8 @@ namespace CoffeeStoreApp
         public string maloaikh { get; set; }
         public Nullable<int> diemtichluy { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HOADON> HOADONs { get; set; }
-        public virtual LOAIKHACHHANG LOAIKHACHHANG { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<HOADON> HOADONs { get; set; }
+        //public virtual LOAIKHACHHANG LOAIKHACHHANG { get; set; }
     }
 }

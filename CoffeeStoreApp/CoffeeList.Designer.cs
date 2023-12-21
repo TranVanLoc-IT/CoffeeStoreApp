@@ -37,6 +37,12 @@ namespace CoffeeStoreApp
             this.cbFilter = new System.Windows.Forms.ComboBox();
             this.flowLayoutAll = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer
@@ -60,9 +66,9 @@ namespace CoffeeStoreApp
             this.flowLayoutHot.AutoScroll = true;
             this.flowLayoutHot.AutoScrollMinSize = new System.Drawing.Size(1279, 100);
             this.flowLayoutHot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutHot.Location = new System.Drawing.Point(12, 59);
+            this.flowLayoutHot.Location = new System.Drawing.Point(12, 38);
             this.flowLayoutHot.Name = "flowLayoutHot";
-            this.flowLayoutHot.Size = new System.Drawing.Size(1268, 372);
+            this.flowLayoutHot.Size = new System.Drawing.Size(855, 382);
             this.flowLayoutHot.TabIndex = 11;
             this.flowLayoutHot.WrapContents = false;
             // 
@@ -104,7 +110,7 @@ namespace CoffeeStoreApp
             this.flowLayoutAll.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutAll.Location = new System.Drawing.Point(12, 471);
             this.flowLayoutAll.Name = "flowLayoutAll";
-            this.flowLayoutAll.Size = new System.Drawing.Size(1268, 379);
+            this.flowLayoutAll.Size = new System.Drawing.Size(1382, 379);
             this.flowLayoutAll.TabIndex = 10;
             this.flowLayoutAll.WrapContents = false;
             // 
@@ -120,12 +126,78 @@ namespace CoffeeStoreApp
             this.label3.TabIndex = 14;
             this.label3.Text = "Thức uống nổi bật";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnHuy);
+            this.groupBox2.Controls.Add(this.btnSua);
+            this.groupBox2.Controls.Add(this.btnXoa);
+            this.groupBox2.Controls.Add(this.btnThem);
+            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(902, 38);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(143, 382);
+            this.groupBox2.TabIndex = 40;
+            this.groupBox2.TabStop = false;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.BackColor = System.Drawing.Color.White;
+            this.btnHuy.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnHuy.Location = new System.Drawing.Point(17, 276);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(107, 51);
+            this.btnHuy.TabIndex = 14;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = false;
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.White;
+            this.btnSua.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSua.Location = new System.Drawing.Point(17, 186);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(107, 51);
+            this.btnSua.TabIndex = 14;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.White;
+            this.btnXoa.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnXoa.Location = new System.Drawing.Point(17, 107);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(107, 51);
+            this.btnXoa.TabIndex = 12;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnThem.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnThem.Location = new System.Drawing.Point(17, 22);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(107, 51);
+            this.btnThem.TabIndex = 11;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = false;
+            // 
             // CoffeeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1292, 852);
+            this.ClientSize = new System.Drawing.Size(1406, 852);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbFilter);
@@ -135,6 +207,7 @@ namespace CoffeeStoreApp
             this.Name = "CoffeeList";
             this.Text = "CoffeeList";
             this.Load += new System.EventHandler(this.CoffeeList_Load);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +222,10 @@ namespace CoffeeStoreApp
         public System.Windows.Forms.ComboBox cbFilter;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutAll;
         public System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnThem;
     }
 }
