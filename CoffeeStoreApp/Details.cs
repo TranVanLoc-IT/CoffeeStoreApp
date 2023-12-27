@@ -39,10 +39,13 @@ namespace CoffeeStoreApp
         private void Details_Load(object sender, EventArgs e)
         {
             HANGHOA hh = data.db.HANGHOAs.Where(itm => itm.mahh == idhh).FirstOrDefault();
-            KIEMKE inventory = data.GetInventoryLatestOfDrinks(idhh);
+            KIEMKE inventory = data.GetInventoryLatestOfDrinks(idhh)?.Last();
             // read coffee info 
             MongoClient client = new MongoClient(connectionString: ConnectionString);
-            pictureBox1.Image = Image.FromStream(new FileStream("../../Images/coffees/" + hh.hinhanh, FileMode.Open));
+            using(var stream = new FileStream("../../Images/coffees/" + hh.hinhanh, FileMode.Open))
+            {
+                pictureBox1.Image = Image.FromStream(stream);
+            }    
             var database = client.GetDatabase("CoffeeDB");
 
             var collection = database.GetCollection<CoffeeInfo>("cfi");
@@ -64,13 +67,20 @@ namespace CoffeeStoreApp
                 txtQuantitySold.Text = "1";
 
                 int star = inventory.sldaban??0;
-                star = (50 / 5)/2;
+                star = (star / 5)/2;
+                if (star > 5) star = 5;
                 while(star != 0)
                 {
                     PictureBox pic = new PictureBox();
                     pic.Width = 50;
                     pic.Height = 45;
-                    pic.Image = Image.FromStream(new FileStream("../../Images/icons/star.png", FileMode.Open));
+                    pic.SizeMode = PictureBoxSizeMode.StretchImage;
+                    using (FileStream stream = new FileStream("../../Images/icons/star.png", FileMode.Open))
+                    {
+                        Image image = Image.FromStream(stream);
+                        pic.Image = image;
+                    }
+                    star--;
                     flowLayoutPanel1.Controls.Add(pic);
                 }    
             }
@@ -78,8 +88,18 @@ namespace CoffeeStoreApp
             {
                 txtName.Text = hh.tenhh;
                 txtPrice.Text = hh.dongia.ToString("N2");
-                txtQuantityLeft.Text = "Chưa có dữ liệu";
+                txtQuantityLeft.Text = "10";
                 txtQuantitySold.Text = "1";
+                PictureBox pic = new PictureBox();
+                pic.Width = 50;
+                pic.Height = 45;
+                pic.SizeMode = PictureBoxSizeMode.StretchImage;
+                using (FileStream stream = new FileStream("../../Images/icons/star.png", FileMode.Open))
+                {
+                    Image image = Image.FromStream(stream);
+                    pic.Image = image;
+                }
+                flowLayoutPanel1.Controls.Add(pic);
             } 
         }
 
@@ -104,6 +124,7 @@ namespace CoffeeStoreApp
             }catch(Exception ex)
             {
                 MessageBox.Show("Thêm món thất bại", "Thông báo");
+                return;
             }
             MessageBox.Show("Thêm món thành công", "Thông báo");
             this.Close();

@@ -30,7 +30,7 @@ namespace CoffeeStoreApp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager));
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,8 +40,6 @@ namespace CoffeeStoreApp
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnImport = new System.Windows.Forms.Button();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnSalary = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.btnNV = new System.Windows.Forms.Button();
             this.btnSP = new System.Windows.Forms.Button();
@@ -54,21 +52,23 @@ namespace CoffeeStoreApp
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // btnLogout
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(900, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 31);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Đăng xuất";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.Location = new System.Drawing.Point(900, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(122, 31);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnNV_Click);
             // 
             // linkLabel1
             // 
@@ -139,7 +139,7 @@ namespace CoffeeStoreApp
             // 
             this.panel2.BackColor = System.Drawing.Color.Chocolate;
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -150,6 +150,7 @@ namespace CoffeeStoreApp
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(907, 51);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -165,7 +166,7 @@ namespace CoffeeStoreApp
             this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImport.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImport.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnImport.Location = new System.Drawing.Point(1, 431);
+            this.btnImport.Location = new System.Drawing.Point(3, 318);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(197, 63);
             this.btnImport.TabIndex = 9;
@@ -173,42 +174,6 @@ namespace CoffeeStoreApp
             this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnImport.UseVisualStyleBackColor = false;
             this.btnImport.Click += new System.EventHandler(this.btnNV_Click);
-            // 
-            // btnReport
-            // 
-            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnReport.Location = new System.Drawing.Point(1, 305);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(197, 63);
-            this.btnReport.TabIndex = 8;
-            this.btnReport.Text = "Báo cáo";
-            this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnNV_Click);
-            // 
-            // btnSalary
-            // 
-            this.btnSalary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnSalary.FlatAppearance.BorderSize = 0;
-            this.btnSalary.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnSalary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
-            this.btnSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalary.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalary.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnSalary.Location = new System.Drawing.Point(1, 368);
-            this.btnSalary.Name = "btnSalary";
-            this.btnSalary.Size = new System.Drawing.Size(197, 63);
-            this.btnSalary.TabIndex = 7;
-            this.btnSalary.Text = "Tính lương";
-            this.btnSalary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalary.UseVisualStyleBackColor = false;
-            this.btnSalary.Click += new System.EventHandler(this.btnNV_Click);
             // 
             // btnCustomer
             // 
@@ -269,8 +234,6 @@ namespace CoffeeStoreApp
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnImport);
-            this.panel1.Controls.Add(this.btnReport);
-            this.panel1.Controls.Add(this.btnSalary);
             this.panel1.Controls.Add(this.btnCustomer);
             this.panel1.Controls.Add(this.btnNV);
             this.panel1.Controls.Add(this.btnSP);
@@ -282,10 +245,14 @@ namespace CoffeeStoreApp
             // 
             // mainPanel
             // 
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.AutoSize = true;
+            this.mainPanel.BackColor = System.Drawing.Color.White;
+            this.mainPanel.Location = new System.Drawing.Point(200, 113);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1234, 664);
+            this.mainPanel.Size = new System.Drawing.Size(1034, 551);
             this.mainPanel.TabIndex = 5;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
@@ -293,6 +260,7 @@ namespace CoffeeStoreApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1234, 664);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -308,12 +276,13 @@ namespace CoffeeStoreApp
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
@@ -323,8 +292,6 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.Button btnReport;
-        private System.Windows.Forms.Button btnSalary;
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnNV;
         private System.Windows.Forms.Button btnSP;

@@ -46,13 +46,14 @@ namespace CoffeeStoreApp
             this.cbStatisticTimeOptions = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.chartIncome = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.cbyears = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartIncome)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1.BackColor = System.Drawing.Color.PeachPuff;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox1.Enabled = false;
@@ -68,6 +69,7 @@ namespace CoffeeStoreApp
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbyears);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtCfIdOrTypeStatistic);
             this.panel1.Controls.Add(this.label11);
@@ -187,7 +189,7 @@ namespace CoffeeStoreApp
             this.cbStatisticTimeOptions.Location = new System.Drawing.Point(190, 13);
             this.cbStatisticTimeOptions.Margin = new System.Windows.Forms.Padding(4);
             this.cbStatisticTimeOptions.Name = "cbStatisticTimeOptions";
-            this.cbStatisticTimeOptions.Size = new System.Drawing.Size(187, 28);
+            this.cbStatisticTimeOptions.Size = new System.Drawing.Size(98, 28);
             this.cbStatisticTimeOptions.TabIndex = 45;
             // 
             // label27
@@ -220,6 +222,16 @@ namespace CoffeeStoreApp
             this.chartIncome.Size = new System.Drawing.Size(590, 498);
             this.chartIncome.TabIndex = 97;
             this.chartIncome.Text = "chart1";
+            // 
+            // cbyears
+            // 
+            this.cbyears.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbyears.FormattingEnabled = true;
+            this.cbyears.Location = new System.Drawing.Point(304, 14);
+            this.cbyears.Margin = new System.Windows.Forms.Padding(4);
+            this.cbyears.Name = "cbyears";
+            this.cbyears.Size = new System.Drawing.Size(98, 28);
+            this.cbyears.TabIndex = 56;
             // 
             // StatisticIncome
             // 
@@ -255,5 +267,6 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.ComboBox cbStatisticTimeOptions;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartIncome;
+        private System.Windows.Forms.ComboBox cbyears;
     }
 }

@@ -227,7 +227,7 @@ namespace CoffeeStoreApp
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.groupBox2.BackColor = System.Drawing.Color.Chocolate;
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtTaste);
             this.groupBox2.Controls.Add(this.flowLayoutPanel1);
@@ -260,14 +260,14 @@ namespace CoffeeStoreApp
             this.txtTaste.Location = new System.Drawing.Point(124, 161);
             this.txtTaste.Multiline = true;
             this.txtTaste.Name = "txtTaste";
-            this.txtTaste.Size = new System.Drawing.Size(431, 85);
+            this.txtTaste.Size = new System.Drawing.Size(431, 91);
             this.txtTaste.TabIndex = 19;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(700, 50);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 45);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(274, 59);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // label2

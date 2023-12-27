@@ -22,13 +22,11 @@ namespace CoffeeStoreApp
                       select itm).ToList();
             return hh;
         }
-        public KIEMKE GetInventoryLatestOfDrinks(string id, int month = 0)
+        public List<KIEMKE> GetInventoryLatestOfDrinks(string id, int month = 0)
         {
             var getproducts = db.KIEMKEs.Where(itm => itm.mahh == id).ToList();
             if (getproducts.Count() == 0) return null;
-            DateTime latestTime = getproducts.Max(itm => itm.ngaykiemke);
-            var getLatestInventory = getproducts.Where(itm => itm.ngaykiemke == latestTime).FirstOrDefault();
-            return getproducts.Last();
+            return getproducts;
         }
         public bool EditCustomer(KHACHHANG kh, string option)
         {
@@ -41,18 +39,11 @@ namespace CoffeeStoreApp
                         db.KHACHHANGs.Add(kh);
                         db.Entry<KHACHHANG>(kh).State = System.Data.Entity.EntityState.Added;
                         break;
-                    case "delete":
-                        db.KHACHHANGs.Remove(kh);
-                        db.Entry<KHACHHANG>(kh).State = System.Data.Entity.EntityState.Deleted;
-                        break;
-                    case "update":
-                        db.KHACHHANGs.Attach(kh);
-                        db.Entry<KHACHHANG>(kh).State = System.Data.Entity.EntityState.Modified;
-                        break;
                 }
                 db.SaveChanges();
             }catch(Exception ex)
             {
+                Console.WriteLine(ex.InnerException);
                 return false;
             }
             return true;
@@ -60,7 +51,6 @@ namespace CoffeeStoreApp
         public bool AddBill(HOADON hd, List<CHITIETHD> cthds)
         {
             if (hd == null) return false;
-            Console.WriteLine("MA NOOOOOOOOOOOOOOO");
             try
             {
                 db.HOADONs.Add(hd);
@@ -74,8 +64,7 @@ namespace CoffeeStoreApp
             }
             catch (Exception ex)
             {
-                Console.WriteLine("LOIII: " + ex.InnerException);
-                return false;
+                return false;   
             }
             return true;
         }
@@ -90,6 +79,7 @@ namespace CoffeeStoreApp
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.InnerException);
                 return false;
             }
             return true;
@@ -122,7 +112,7 @@ namespace CoffeeStoreApp
         }    
         public void UpdateTableStatus(string mahd)
         {
-            int success = db.Database.ExecuteSqlCommand($"exec UpdateTableStatus {mahd}");
+            int success = db.Database.ExecuteSqlCommand($"exec UpdateTableStatus '{mahd}'");
         }
     }
 }

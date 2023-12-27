@@ -126,11 +126,11 @@ namespace CoffeeStoreApp
             this.dataGridViewCart.RowTemplate.Height = 24;
             this.dataGridViewCart.Size = new System.Drawing.Size(676, 283);
             this.dataGridViewCart.TabIndex = 74;
+            this.dataGridViewCart.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_list_Cart_CellClick);
             // 
             // btnRemove
             // 
-            this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -145,6 +145,7 @@ namespace CoffeeStoreApp
             this.btnRemove.Text = "Xóa ";
             this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // Cart
             // 

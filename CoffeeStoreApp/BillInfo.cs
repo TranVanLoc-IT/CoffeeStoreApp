@@ -11,6 +11,9 @@ namespace CoffeeStoreApp
 
         private static string maban;
 
+        public double moneyRecieve { get; set; }
+
+        public double change { get; set; }
         public HOADON hd { get; set; }
 
         public event Action<string> FormClosingEvent;
@@ -49,7 +52,7 @@ namespace CoffeeStoreApp
                 table.btnTable.Text = ban.tenban + " - " + ban.KHUVUC.tenkv;
                 table.btnTable.Name = ban.maban;
                 table.btnTable.Click += btnTable_Click;
-                panelTable.Controls.Add(table);
+                flowTable.Controls.Add(table);
             }    
             if(cfs.Count() > 1)
             {
@@ -75,7 +78,7 @@ namespace CoffeeStoreApp
         private void btnTable_Click(object sender, EventArgs e)
         {
             maban = (sender as Button).Name;
-            foreach(var t in panelTable.Controls)
+            foreach(var t in flowTable.Controls)
             {
                 if(t is Button table)
                 {
@@ -104,6 +107,20 @@ namespace CoffeeStoreApp
         }
         private void btnBill_Click(object sender, EventArgs e)
         {
+
+            double a;
+            if (!double.TryParse(txtTake.Text, out a))
+            {
+                MessageBox.Show("Sai định dạng", "Lỗi");
+                return;
+            }
+            if (a < hd.tongtien)
+            {
+                MessageBox.Show("Thiếu tiền :(", "Lỗi");
+                return;
+            }
+            this.moneyRecieve = double.Parse(txtTake.Text);
+            this.change = Math.Abs(hd.tongtien - this.moneyRecieve);
             List<CHITIETHD> cthds = new List<CHITIETHD>();
             if(!string.IsNullOrEmpty(maban))
             {
@@ -118,11 +135,6 @@ namespace CoffeeStoreApp
                 cthd.thanhtien = decimal.Parse(i.tongtien.ToString());
                 cthds.Add(cthd);
             }
-            Console.WriteLine($"{hd.mahd}-{hd.manv}-{hd.makh}-{hd.tongtien}-{hd.maban}-{hd.ngaylap}");
-            foreach(var i in cthds)
-            {
-                Console.WriteLine($"{i.mahd}-{i.mahh}-{i.soluong}");
-            }    
             if(data.AddBill(hd, cthds))
             {
                 MessageBox.Show("Thanh toán Thành công", "Thông báo");
@@ -137,7 +149,7 @@ namespace CoffeeStoreApp
 
         private void btnCancelTable_Click(object sender, EventArgs e)
         {
-            foreach (var t in panelTable.Controls)
+            foreach (var t in flowTable.Controls)
             {
                 if (t is Button table)
                 {
@@ -150,6 +162,11 @@ namespace CoffeeStoreApp
             }
             txtTableCode.Text = "";
             maban = string.Empty;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

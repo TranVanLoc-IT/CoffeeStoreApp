@@ -64,13 +64,16 @@
             // 
             // gb_listBan
             // 
+            this.gb_listBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_listBan.Controls.Add(this.dgv_list_NV);
             this.gb_listBan.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gb_listBan.ForeColor = System.Drawing.Color.SaddleBrown;
             this.gb_listBan.Location = new System.Drawing.Point(573, 107);
             this.gb_listBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_listBan.Name = "gb_listBan";
             this.gb_listBan.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gb_listBan.Size = new System.Drawing.Size(1089, 546);
+            this.gb_listBan.Size = new System.Drawing.Size(930, 546);
             this.gb_listBan.TabIndex = 45;
             this.gb_listBan.TabStop = false;
             this.gb_listBan.Text = "Danh Sách Nhân Viên";
@@ -79,16 +82,19 @@
             // 
             this.dgv_list_NV.AllowUserToAddRows = false;
             this.dgv_list_NV.AllowUserToDeleteRows = false;
+            this.dgv_list_NV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_list_NV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_list_NV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_list_NV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_list_NV.Location = new System.Drawing.Point(5, 44);
+            this.dgv_list_NV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_list_NV.Location = new System.Drawing.Point(3, 23);
             this.dgv_list_NV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_list_NV.Name = "dgv_list_NV";
             this.dgv_list_NV.ReadOnly = true;
             this.dgv_list_NV.RowHeadersWidth = 51;
             this.dgv_list_NV.RowTemplate.Height = 24;
             this.dgv_list_NV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_list_NV.Size = new System.Drawing.Size(1079, 495);
+            this.dgv_list_NV.Size = new System.Drawing.Size(924, 521);
             this.dgv_list_NV.TabIndex = 0;
             this.dgv_list_NV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_list_NV_CellClick);
             // 
@@ -111,7 +117,7 @@
             this.bt_update_KH.BackColor = System.Drawing.Color.ForestGreen;
             this.bt_update_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
             this.bt_update_KH.ForeColor = System.Drawing.Color.White;
-            this.bt_update_KH.Location = new System.Drawing.Point(872, 693);
+            this.bt_update_KH.Location = new System.Drawing.Point(808, 693);
             this.bt_update_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_update_KH.Name = "bt_update_KH";
             this.bt_update_KH.Size = new System.Drawing.Size(185, 47);
@@ -126,7 +132,7 @@
             this.tb_find_NV.Location = new System.Drawing.Point(578, 41);
             this.tb_find_NV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_find_NV.Name = "tb_find_NV";
-            this.tb_find_NV.Size = new System.Drawing.Size(869, 28);
+            this.tb_find_NV.Size = new System.Drawing.Size(611, 28);
             this.tb_find_NV.TabIndex = 47;
             // 
             // dateTimePicker1
@@ -142,7 +148,7 @@
             this.bt_out_KH.BackColor = System.Drawing.Color.SlateBlue;
             this.bt_out_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
             this.bt_out_KH.ForeColor = System.Drawing.Color.White;
-            this.bt_out_KH.Location = new System.Drawing.Point(1464, 693);
+            this.bt_out_KH.Location = new System.Drawing.Point(1267, 693);
             this.bt_out_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_out_KH.Name = "bt_out_KH";
             this.bt_out_KH.Size = new System.Drawing.Size(185, 47);
@@ -259,7 +265,7 @@
             this.bt_clear_KH.BackColor = System.Drawing.Color.Crimson;
             this.bt_clear_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
             this.bt_clear_KH.ForeColor = System.Drawing.Color.White;
-            this.bt_clear_KH.Location = new System.Drawing.Point(1168, 693);
+            this.bt_clear_KH.Location = new System.Drawing.Point(1048, 693);
             this.bt_clear_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_clear_KH.Name = "bt_clear_KH";
             this.bt_clear_KH.Size = new System.Drawing.Size(185, 47);
@@ -359,6 +365,7 @@
             this.gb_Ban.Controls.Add(this.label2);
             this.gb_Ban.Controls.Add(this.label1);
             this.gb_Ban.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
+            this.gb_Ban.ForeColor = System.Drawing.Color.SaddleBrown;
             this.gb_Ban.Location = new System.Drawing.Point(22, 26);
             this.gb_Ban.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_Ban.Name = "gb_Ban";
@@ -383,7 +390,7 @@
             this.bt_find_NV.BackColor = System.Drawing.Color.DodgerBlue;
             this.bt_find_NV.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
             this.bt_find_NV.ForeColor = System.Drawing.Color.White;
-            this.bt_find_NV.Location = new System.Drawing.Point(1470, 31);
+            this.bt_find_NV.Location = new System.Drawing.Point(1218, 26);
             this.bt_find_NV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_find_NV.Name = "bt_find_NV";
             this.bt_find_NV.Size = new System.Drawing.Size(185, 47);
@@ -396,7 +403,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1685, 766);
+            this.BackColor = System.Drawing.Color.SandyBrown;
+            this.ClientSize = new System.Drawing.Size(1514, 766);
             this.Controls.Add(this.gb_listBan);
             this.Controls.Add(this.bt_add_KH);
             this.Controls.Add(this.bt_update_KH);

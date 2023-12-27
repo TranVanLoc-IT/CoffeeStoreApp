@@ -36,8 +36,8 @@ namespace CoffeeStoreApp
             this.fillCustomerInfo = new System.Windows.Forms.Button();
             this.confirmProduct = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.confirmProduct_NextStep = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.confirmProduct_NextStep = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -101,9 +101,10 @@ namespace CoffeeStoreApp
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Chocolate;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Goudy Stout", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -115,6 +116,15 @@ namespace CoffeeStoreApp
             this.label1.Text = "Thanh toán";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.Location = new System.Drawing.Point(1, 169);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1013, 322);
+            this.mainPanel.TabIndex = 71;
+            // 
             // confirmProduct_NextStep
             // 
             this.confirmProduct_NextStep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -124,7 +134,7 @@ namespace CoffeeStoreApp
             this.confirmProduct_NextStep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmProduct_NextStep.Image = ((System.Drawing.Image)(resources.GetObject("confirmProduct_NextStep.Image")));
             this.confirmProduct_NextStep.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.confirmProduct_NextStep.Location = new System.Drawing.Point(848, 454);
+            this.confirmProduct_NextStep.Location = new System.Drawing.Point(851, 495);
             this.confirmProduct_NextStep.Name = "confirmProduct_NextStep";
             this.confirmProduct_NextStep.Size = new System.Drawing.Size(141, 43);
             this.confirmProduct_NextStep.TabIndex = 70;
@@ -132,15 +142,6 @@ namespace CoffeeStoreApp
             this.confirmProduct_NextStep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.confirmProduct_NextStep.UseVisualStyleBackColor = true;
             this.confirmProduct_NextStep.Click += new System.EventHandler(this.ChildForm_NextStepHandle);
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.Location = new System.Drawing.Point(1, 169);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1013, 279);
-            this.mainPanel.TabIndex = 71;
             // 
             // btnReturn
             // 
@@ -153,7 +154,7 @@ namespace CoffeeStoreApp
             this.btnReturn.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.Image = ((System.Drawing.Image)(resources.GetObject("btnReturn.Image")));
             this.btnReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReturn.Location = new System.Drawing.Point(679, 457);
+            this.btnReturn.Location = new System.Drawing.Point(682, 498);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(145, 40);
@@ -168,7 +169,7 @@ namespace CoffeeStoreApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1016, 504);
+            this.ClientSize = new System.Drawing.Size(1016, 550);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.confirmProduct_NextStep);
@@ -188,11 +189,11 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button confirmProduct;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button confirmProduct_NextStep;
         private System.Windows.Forms.Button success;
         private System.Windows.Forms.Button fillBillInfo;
         private System.Windows.Forms.Button fillCustomerInfo;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Button confirmProduct_NextStep;
         private System.Windows.Forms.Button btnReturn;
     }
 }

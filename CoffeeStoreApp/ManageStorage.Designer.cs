@@ -36,8 +36,6 @@ namespace CoffeeStoreApp
             this.btnView = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelInfo = new System.Windows.Forms.Panel();
-            this.txtStoreImp = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnAcceptImp = new System.Windows.Forms.Button();
             this.cfProvider = new System.Windows.Forms.TextBox();
@@ -63,7 +61,7 @@ namespace CoffeeStoreApp
             // 
             this.txtRegis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtRegis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtRegis.Location = new System.Drawing.Point(87, 194);
+            this.txtRegis.Location = new System.Drawing.Point(87, 139);
             this.txtRegis.Name = "txtRegis";
             this.txtRegis.Size = new System.Drawing.Size(187, 26);
             this.txtRegis.TabIndex = 17;
@@ -89,7 +87,7 @@ namespace CoffeeStoreApp
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Snow;
+            this.textBox1.BackColor = System.Drawing.Color.PeachPuff;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox1.Enabled = false;
@@ -110,8 +108,6 @@ namespace CoffeeStoreApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelInfo.Controls.Add(this.txtRegis);
             this.panelInfo.Controls.Add(this.btnView);
-            this.panelInfo.Controls.Add(this.txtStoreImp);
-            this.panelInfo.Controls.Add(this.label4);
             this.panelInfo.Controls.Add(this.label7);
             this.panelInfo.Controls.Add(this.btnAcceptImp);
             this.panelInfo.Controls.Add(this.cfProvider);
@@ -128,32 +124,12 @@ namespace CoffeeStoreApp
             this.panelInfo.Size = new System.Drawing.Size(877, 223);
             this.panelInfo.TabIndex = 20;
             // 
-            // txtStoreImp
-            // 
-            this.txtStoreImp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtStoreImp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtStoreImp.Location = new System.Drawing.Point(213, 17);
-            this.txtStoreImp.Name = "txtStoreImp";
-            this.txtStoreImp.Size = new System.Drawing.Size(100, 26);
-            this.txtStoreImp.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(76, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Mã cửa hàng:";
-            // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(158, 173);
+            this.label7.Location = new System.Drawing.Point(158, 118);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 20);
             this.label7.TabIndex = 13;
@@ -221,7 +197,7 @@ namespace CoffeeStoreApp
             // 
             this.txtCfCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtCfCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtCfCode.Location = new System.Drawing.Point(165, 78);
+            this.txtCfCode.Location = new System.Drawing.Point(165, 23);
             this.txtCfCode.Name = "txtCfCode";
             this.txtCfCode.Size = new System.Drawing.Size(100, 26);
             this.txtCfCode.TabIndex = 7;
@@ -241,7 +217,7 @@ namespace CoffeeStoreApp
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(76, 85);
+            this.label3.Location = new System.Drawing.Point(76, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 8;
@@ -252,7 +228,7 @@ namespace CoffeeStoreApp
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(76, 138);
+            this.label6.Location = new System.Drawing.Point(76, 83);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 20);
             this.label6.TabIndex = 11;
@@ -262,7 +238,7 @@ namespace CoffeeStoreApp
             // 
             this.cfQuantityImp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cfQuantityImp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cfQuantityImp.Location = new System.Drawing.Point(225, 130);
+            this.cfQuantityImp.Location = new System.Drawing.Point(225, 75);
             this.cfQuantityImp.Name = "cfQuantityImp";
             this.cfQuantityImp.Size = new System.Drawing.Size(100, 26);
             this.cfQuantityImp.TabIndex = 9;
@@ -307,6 +283,7 @@ namespace CoffeeStoreApp
             this.Controls.Add(this.dataGridViewImp);
             this.Name = "ManageStorage";
             this.Text = "ManageStorage";
+            this.Load += new System.EventHandler(this.ManageStorage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.panelInfo.ResumeLayout(false);
             this.panelInfo.PerformLayout();
@@ -323,8 +300,6 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Panel panelInfo;
         private System.Windows.Forms.TextBox txtRegis;
         private System.Windows.Forms.Button btnView;
-        private System.Windows.Forms.TextBox txtStoreImp;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAcceptImp;
         private System.Windows.Forms.Button btnCancelImp;

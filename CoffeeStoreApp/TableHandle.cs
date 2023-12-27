@@ -13,8 +13,8 @@ namespace CoffeeStoreApp
     public partial class TableHandle : Form
     {
         private Data _data = new Data();
-        public static int empty { get; set; }
-        public static int inuse { get; set; }
+        public int empty { get; set; } = 0;
+        public int inuse { get; set; } = 0;
         public TableHandle()
         {
             InitializeComponent();
@@ -67,10 +67,10 @@ namespace CoffeeStoreApp
             {
                 BillHandle handle = control as BillHandle;
                 flowLayoutPanel1.Controls.Remove(handle);
-                --inuse;
-                ++empty;
                 _data.UpdateTableStatus(handle.btnTable.Name);
             }
+            empty = _data.db.BANs.Count();
+            inuse = 0;
             flowLayoutPanel1.Controls.Clear();
             txtEmptyTable.Text = empty.ToString();
             txtTableUsing.Text = inuse.ToString();

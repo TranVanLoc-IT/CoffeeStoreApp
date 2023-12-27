@@ -60,32 +60,37 @@
             // 
             this.dgv_list_KH.AllowUserToAddRows = false;
             this.dgv_list_KH.AllowUserToDeleteRows = false;
-            this.dgv_list_KH.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgv_list_KH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_list_KH.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_list_KH.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgv_list_KH.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_list_KH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_list_KH.Location = new System.Drawing.Point(5, 44);
+            this.dgv_list_KH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_list_KH.GridColor = System.Drawing.Color.SaddleBrown;
+            this.dgv_list_KH.Location = new System.Drawing.Point(3, 23);
             this.dgv_list_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_list_KH.Name = "dgv_list_KH";
             this.dgv_list_KH.ReadOnly = true;
             this.dgv_list_KH.RowHeadersWidth = 51;
             this.dgv_list_KH.RowTemplate.Height = 24;
             this.dgv_list_KH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_list_KH.Size = new System.Drawing.Size(1079, 495);
+            this.dgv_list_KH.Size = new System.Drawing.Size(791, 439);
             this.dgv_list_KH.TabIndex = 0;
             this.dgv_list_KH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_list_KH_CellClick);
             // 
             // txtdiem
             // 
             this.txtdiem.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtdiem.Location = new System.Drawing.Point(192, 457);
+            this.txtdiem.Location = new System.Drawing.Point(203, 454);
             this.txtdiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdiem.Name = "txtdiem";
-            this.txtdiem.Size = new System.Drawing.Size(309, 28);
+            this.txtdiem.Size = new System.Drawing.Size(226, 28);
             this.txtdiem.TabIndex = 2;
             // 
             // tb_loai_KH
             // 
             this.tb_loai_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.tb_loai_KH.Location = new System.Drawing.Point(192, 396);
+            this.tb_loai_KH.Location = new System.Drawing.Point(120, 389);
             this.tb_loai_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_loai_KH.Name = "tb_loai_KH";
             this.tb_loai_KH.Size = new System.Drawing.Size(309, 28);
@@ -94,7 +99,7 @@
             // tb_email_KH
             // 
             this.tb_email_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.tb_email_KH.Location = new System.Drawing.Point(192, 325);
+            this.tb_email_KH.Location = new System.Drawing.Point(120, 318);
             this.tb_email_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_email_KH.Name = "tb_email_KH";
             this.tb_email_KH.Size = new System.Drawing.Size(309, 28);
@@ -103,7 +108,7 @@
             // tb_sdt_KH
             // 
             this.tb_sdt_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.tb_sdt_KH.Location = new System.Drawing.Point(192, 261);
+            this.tb_sdt_KH.Location = new System.Drawing.Point(120, 254);
             this.tb_sdt_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_sdt_KH.Name = "tb_sdt_KH";
             this.tb_sdt_KH.Size = new System.Drawing.Size(309, 28);
@@ -122,7 +127,7 @@
             // tb_dc_KH
             // 
             this.tb_dc_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.tb_dc_KH.Location = new System.Drawing.Point(192, 188);
+            this.tb_dc_KH.Location = new System.Drawing.Point(120, 181);
             this.tb_dc_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_dc_KH.Name = "tb_dc_KH";
             this.tb_dc_KH.Size = new System.Drawing.Size(309, 28);
@@ -141,7 +146,7 @@
             // tb_tenKH
             // 
             this.tb_tenKH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.tb_tenKH.Location = new System.Drawing.Point(192, 128);
+            this.tb_tenKH.Location = new System.Drawing.Point(120, 121);
             this.tb_tenKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_tenKH.Name = "tb_tenKH";
             this.tb_tenKH.Size = new System.Drawing.Size(309, 28);
@@ -160,7 +165,7 @@
             // tb_maKH
             // 
             this.tb_maKH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.tb_maKH.Location = new System.Drawing.Point(192, 64);
+            this.tb_maKH.Location = new System.Drawing.Point(120, 57);
             this.tb_maKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_maKH.Name = "tb_maKH";
             this.tb_maKH.Size = new System.Drawing.Size(309, 28);
@@ -171,7 +176,7 @@
             this.bt_update_KH.BackColor = System.Drawing.Color.ForestGreen;
             this.bt_update_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
             this.bt_update_KH.ForeColor = System.Drawing.Color.White;
-            this.bt_update_KH.Location = new System.Drawing.Point(872, 693);
+            this.bt_update_KH.Location = new System.Drawing.Point(778, 595);
             this.bt_update_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_update_KH.Name = "bt_update_KH";
             this.bt_update_KH.Size = new System.Drawing.Size(185, 47);
@@ -183,10 +188,10 @@
             // tb_find_KH
             // 
             this.tb_find_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.tb_find_KH.Location = new System.Drawing.Point(578, 41);
+            this.tb_find_KH.Location = new System.Drawing.Point(484, 39);
             this.tb_find_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_find_KH.Name = "tb_find_KH";
-            this.tb_find_KH.Size = new System.Drawing.Size(869, 28);
+            this.tb_find_KH.Size = new System.Drawing.Size(582, 28);
             this.tb_find_KH.TabIndex = 39;
             // 
             // bt_out_KH
@@ -194,7 +199,7 @@
             this.bt_out_KH.BackColor = System.Drawing.Color.SlateBlue;
             this.bt_out_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
             this.bt_out_KH.ForeColor = System.Drawing.Color.White;
-            this.bt_out_KH.Location = new System.Drawing.Point(1464, 693);
+            this.bt_out_KH.Location = new System.Drawing.Point(1372, 693);
             this.bt_out_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_out_KH.Name = "bt_out_KH";
             this.bt_out_KH.Size = new System.Drawing.Size(185, 47);
@@ -208,20 +213,21 @@
             this.bt_find_KH.BackColor = System.Drawing.Color.DodgerBlue;
             this.bt_find_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
             this.bt_find_KH.ForeColor = System.Drawing.Color.White;
-            this.bt_find_KH.Location = new System.Drawing.Point(1470, 31);
+            this.bt_find_KH.Location = new System.Drawing.Point(1076, 20);
             this.bt_find_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_find_KH.Name = "bt_find_KH";
             this.bt_find_KH.Size = new System.Drawing.Size(185, 47);
             this.bt_find_KH.TabIndex = 41;
             this.bt_find_KH.Text = "Tìm Kiếm";
             this.bt_find_KH.UseVisualStyleBackColor = false;
+            this.bt_find_KH.Click += new System.EventHandler(this.bt_find_KH_Click);
             // 
             // bt_clear_KH
             // 
             this.bt_clear_KH.BackColor = System.Drawing.Color.Crimson;
             this.bt_clear_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
             this.bt_clear_KH.ForeColor = System.Drawing.Color.White;
-            this.bt_clear_KH.Location = new System.Drawing.Point(1168, 693);
+            this.bt_clear_KH.Location = new System.Drawing.Point(1053, 595);
             this.bt_clear_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_clear_KH.Name = "bt_clear_KH";
             this.bt_clear_KH.Size = new System.Drawing.Size(185, 47);
@@ -287,11 +293,12 @@
             this.gb_Ban.Controls.Add(this.label2);
             this.gb_Ban.Controls.Add(this.label1);
             this.gb_Ban.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.gb_Ban.Location = new System.Drawing.Point(22, 26);
+            this.gb_Ban.ForeColor = System.Drawing.SystemColors.Info;
+            this.gb_Ban.Location = new System.Drawing.Point(12, 26);
             this.gb_Ban.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_Ban.Name = "gb_Ban";
             this.gb_Ban.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gb_Ban.Size = new System.Drawing.Size(517, 714);
+            this.gb_Ban.Size = new System.Drawing.Size(435, 542);
             this.gb_Ban.TabIndex = 38;
             this.gb_Ban.TabStop = false;
             this.gb_Ban.Text = "Khách Hàng";
@@ -301,7 +308,7 @@
             this.bt_add_KH.BackColor = System.Drawing.Color.DodgerBlue;
             this.bt_add_KH.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
             this.bt_add_KH.ForeColor = System.Drawing.Color.White;
-            this.bt_add_KH.Location = new System.Drawing.Point(576, 693);
+            this.bt_add_KH.Location = new System.Drawing.Point(502, 595);
             this.bt_add_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_add_KH.Name = "bt_add_KH";
             this.bt_add_KH.Size = new System.Drawing.Size(185, 47);
@@ -312,13 +319,16 @@
             // 
             // gb_listBan
             // 
+            this.gb_listBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_listBan.Controls.Add(this.dgv_list_KH);
             this.gb_listBan.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.gb_listBan.Location = new System.Drawing.Point(573, 107);
+            this.gb_listBan.ForeColor = System.Drawing.Color.Bisque;
+            this.gb_listBan.Location = new System.Drawing.Point(484, 104);
             this.gb_listBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_listBan.Name = "gb_listBan";
             this.gb_listBan.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gb_listBan.Size = new System.Drawing.Size(1089, 546);
+            this.gb_listBan.Size = new System.Drawing.Size(797, 464);
             this.gb_listBan.TabIndex = 37;
             this.gb_listBan.TabStop = false;
             this.gb_listBan.Text = "Danh Sách Khách Hàng";
@@ -327,7 +337,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1685, 766);
+            this.BackColor = System.Drawing.Color.SandyBrown;
+            this.ClientSize = new System.Drawing.Size(1296, 680);
             this.Controls.Add(this.bt_update_KH);
             this.Controls.Add(this.tb_find_KH);
             this.Controls.Add(this.bt_out_KH);

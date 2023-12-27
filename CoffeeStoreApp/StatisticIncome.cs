@@ -31,26 +31,27 @@ namespace CoffeeStoreApp
             chartIncome.ChartAreas.Clear();
             if (txtCfIdOrTypeStatistic.TextLength == 5)
             {
-                var hht = _data.db.CHITIETHDs.Where(itm => itm.mahh == txtCfIdOrTypeStatistic.Text).Select(itm => itm.mahd).ToList();
-                var getMonths = _data.db.HOADONs.Where(itm => hht.Contains(itm.mahd)).Select(itm => itm.ngaylap.Month).ToList();
-
-                cbStatisticTimeOptions.Items.AddRange(getMonths.Distinct().Select(itm => "Tháng " + itm).ToArray());
-                string getOption = cbStatisticTimeOptions.GetItemText(cbStatisticTimeOptions.SelectedItem);
+                string getOptionM = cbStatisticTimeOptions.GetItemText(cbStatisticTimeOptions.SelectedItem);
+                string getOptionY = cbyears.GetItemText(cbyears.SelectedItem);
                 int month = DateTime.Now.Month;
-                    MessageBox.Show(getOption.Split(' ')[1], getOption.Split(' ')[1]);
-                if (int.TryParse(getOption.Split(' ')[1], out month))
+                int year = DateTime.Now.Year;
+                if (int.TryParse(getOptionM.Split(' ')[1], out month))
                 {
-                    MessageBox.Show(getOption.Split(' ')[1], getOption.Split(' ')[1]);
                     // nothing to do
-                    month = int.Parse(getOption.Split(' ')[1]);
+                    month = int.Parse(getOptionM.Split(' ')[1]);
+                }
+                if (int.TryParse(getOptionY.Split(' ')[1], out year))
+                {
+                    // nothing to do
+                    year = int.Parse(getOptionY.Split(' ')[1]);
                 }
                 var income = from hd in _data.db.HOADONs
                              join cthd in _data.db.CHITIETHDs
                              on hd.mahd equals cthd.mahd
                              join hh in _data.db.HANGHOAs
                              on cthd.mahh equals hh.mahh
-                             where cthd.mahh == txtCfIdOrTypeStatistic.Text && hd.ngaylap.Month == month ||
-                             hh.maloaihh == txtCfIdOrTypeStatistic.Text && hd.ngaylap.Month == month
+                             where cthd.mahh == txtCfIdOrTypeStatistic.Text && hd.ngaylap.Month == month
+                             && hd.ngaylap.Year == year
                              group hd by hd.ngaylap
                              into gr
                              select new { Key = gr.Key, tongtien = gr.Sum(itm => itm.tongtien), mahd = gr.Select(itm => itm.mahd) };
@@ -92,6 +93,9 @@ namespace CoffeeStoreApp
                 var hht = _data.db.CHITIETHDs.Where(itm => itm.mahh == txtCfIdOrTypeStatistic.Text).Select(itm => itm.mahd).ToList();
                 var getMonths = _data.db.HOADONs.Where(itm => hht.Contains(itm.mahd)).Select(itm => itm.ngaylap.Month).ToList();
 
+                List<int> getYears = _data.db.HOADONs.Where(itm => hht.Contains(itm.mahd)).Select(itm => itm.ngaylap.Year).ToList();
+
+                cbyears.Items.AddRange(getYears.Distinct().Select(itm => "Năm " + itm).ToArray());
                 cbStatisticTimeOptions.Items.AddRange(getMonths.Distinct().Select(itm => "Tháng " + itm).ToArray());
             }
         }

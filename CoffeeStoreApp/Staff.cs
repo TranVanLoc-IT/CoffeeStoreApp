@@ -47,6 +47,8 @@ namespace CoffeeStoreApp
             this.mainPanel.Controls.Add(childForm);
             this.Height += childForm.Height - this.mainPanel.Height;
             this.Width += childForm.Width - this.mainPanel.Width;
+            this.mainPanel.Width += 20;
+            this.mainPanel.Height += 20;
             this.Height += 20;
             this.Width += 20;
             this.mainPanel.Tag = childForm;
@@ -86,11 +88,11 @@ namespace CoffeeStoreApp
                     var result = MessageBox.Show("Bạn có muốn kết ca", "Thông báo");
                     if(result == DialogResult.OK)
                     {
-
                         this.Close();
+                        Login l = new Login();
+                        l.Show();
                     }    
                     break;
-
             }
         }
     }

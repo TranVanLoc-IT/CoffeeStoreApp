@@ -39,7 +39,7 @@ namespace CoffeeStoreApp
             this.label2 = new System.Windows.Forms.Label();
             this.txtProductList = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tenkh = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtScore = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@ namespace CoffeeStoreApp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(121, 61);
+            this.label1.Location = new System.Drawing.Point(28, 53);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 21);
@@ -65,14 +65,16 @@ namespace CoffeeStoreApp
             // txtBillCode
             // 
             this.txtBillCode.Enabled = false;
-            this.txtBillCode.Location = new System.Drawing.Point(255, 61);
-            this.txtBillCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBillCode.Location = new System.Drawing.Point(162, 53);
+            this.txtBillCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBillCode.Name = "txtBillCode";
             this.txtBillCode.Size = new System.Drawing.Size(124, 28);
             this.txtBillCode.TabIndex = 1;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Peru;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.printToolStripMenuItem,
@@ -80,35 +82,36 @@ namespace CoffeeStoreApp
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1244, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(948, 33);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(66, 29);
             this.printToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveAsCSVToolStripMenuItem});
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(54, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // saveAsCSVToolStripMenuItem
             // 
             this.saveAsCSVToolStripMenuItem.Name = "saveAsCSVToolStripMenuItem";
-            this.saveAsCSVToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveAsCSVToolStripMenuItem.Size = new System.Drawing.Size(199, 30);
             this.saveAsCSVToolStripMenuItem.Text = "Save as CSV";
             // 
             // txtTotal
             // 
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(669, 108);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotal.Location = new System.Drawing.Point(480, 97);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(190, 28);
             this.txtTotal.TabIndex = 4;
@@ -116,7 +119,7 @@ namespace CoffeeStoreApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(491, 108);
+            this.label2.Location = new System.Drawing.Point(302, 97);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 21);
@@ -126,8 +129,8 @@ namespace CoffeeStoreApp
             // txtProductList
             // 
             this.txtProductList.Enabled = false;
-            this.txtProductList.Location = new System.Drawing.Point(730, 165);
-            this.txtProductList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductList.Location = new System.Drawing.Point(541, 154);
+            this.txtProductList.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductList.Multiline = true;
             this.txtProductList.Name = "txtProductList";
             this.txtProductList.Size = new System.Drawing.Size(309, 100);
@@ -136,27 +139,27 @@ namespace CoffeeStoreApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(492, 165);
+            this.label3.Location = new System.Drawing.Point(303, 154);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(200, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "Danh sách sản phẩm mua";
             // 
-            // textBox4
+            // tenkh
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(637, 61);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(222, 28);
-            this.textBox4.TabIndex = 8;
+            this.tenkh.Enabled = false;
+            this.tenkh.Location = new System.Drawing.Point(448, 50);
+            this.tenkh.Margin = new System.Windows.Forms.Padding(4);
+            this.tenkh.Name = "tenkh";
+            this.tenkh.Size = new System.Drawing.Size(222, 28);
+            this.tenkh.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.CausesValidation = false;
-            this.label4.Location = new System.Drawing.Point(490, 60);
+            this.label4.Location = new System.Drawing.Point(301, 49);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 21);
@@ -166,8 +169,8 @@ namespace CoffeeStoreApp
             // txtScore
             // 
             this.txtScore.Enabled = false;
-            this.txtScore.Location = new System.Drawing.Point(1001, 61);
-            this.txtScore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtScore.Location = new System.Drawing.Point(799, 42);
+            this.txtScore.Margin = new System.Windows.Forms.Padding(4);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(124, 28);
             this.txtScore.TabIndex = 10;
@@ -175,7 +178,7 @@ namespace CoffeeStoreApp
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(867, 61);
+            this.label5.Location = new System.Drawing.Point(678, 50);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 21);
@@ -186,8 +189,8 @@ namespace CoffeeStoreApp
             // dateSet
             // 
             this.dateSet.Enabled = false;
-            this.dateSet.Location = new System.Drawing.Point(255, 108);
-            this.dateSet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateSet.Location = new System.Drawing.Point(162, 100);
+            this.dateSet.Margin = new System.Windows.Forms.Padding(4);
             this.dateSet.Name = "dateSet";
             this.dateSet.Size = new System.Drawing.Size(124, 28);
             this.dateSet.TabIndex = 12;
@@ -195,7 +198,7 @@ namespace CoffeeStoreApp
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(121, 108);
+            this.label6.Location = new System.Drawing.Point(28, 100);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 21);
@@ -205,8 +208,8 @@ namespace CoffeeStoreApp
             // txtStaffName
             // 
             this.txtStaffName.Enabled = false;
-            this.txtStaffName.Location = new System.Drawing.Point(255, 165);
-            this.txtStaffName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStaffName.Location = new System.Drawing.Point(162, 157);
+            this.txtStaffName.Margin = new System.Windows.Forms.Padding(4);
             this.txtStaffName.Name = "txtStaffName";
             this.txtStaffName.Size = new System.Drawing.Size(124, 28);
             this.txtStaffName.TabIndex = 14;
@@ -214,7 +217,7 @@ namespace CoffeeStoreApp
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(121, 165);
+            this.label7.Location = new System.Drawing.Point(28, 157);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 21);
@@ -224,7 +227,7 @@ namespace CoffeeStoreApp
             // txtTable
             // 
             this.txtTable.Enabled = false;
-            this.txtTable.Location = new System.Drawing.Point(255, 212);
+            this.txtTable.Location = new System.Drawing.Point(162, 204);
             this.txtTable.Margin = new System.Windows.Forms.Padding(4);
             this.txtTable.Name = "txtTable";
             this.txtTable.Size = new System.Drawing.Size(124, 28);
@@ -233,7 +236,7 @@ namespace CoffeeStoreApp
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(121, 212);
+            this.label8.Location = new System.Drawing.Point(28, 204);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 21);
@@ -244,7 +247,7 @@ namespace CoffeeStoreApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 290);
+            this.ClientSize = new System.Drawing.Size(948, 290);
             this.Controls.Add(this.txtTable);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtStaffName);
@@ -253,7 +256,7 @@ namespace CoffeeStoreApp
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tenkh);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtProductList);
             this.Controls.Add(this.label3);
@@ -264,7 +267,7 @@ namespace CoffeeStoreApp
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BillStatus";
             this.Text = "BillStatus";
             this.Load += new System.EventHandler(this.BillStatus_Load);
@@ -287,7 +290,7 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtProductList;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tenkh;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtScore;
         private System.Windows.Forms.Label label5;

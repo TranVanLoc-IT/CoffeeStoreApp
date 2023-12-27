@@ -32,9 +32,10 @@ namespace CoffeeStoreApp
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnAddCus = new System.Windows.Forms.Button();
-            this.btnEditCus = new System.Windows.Forms.Button();
+            this.insert = new System.Windows.Forms.Button();
             this.panelCusinfo = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtCusAddress = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,53 +55,34 @@ namespace CoffeeStoreApp
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // btnAddCus
+            // insert
             // 
-            this.btnAddCus.AutoSize = true;
-            this.btnAddCus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAddCus.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnAddCus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
-            this.btnAddCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCus.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCus.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnAddCus.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCus.Image")));
-            this.btnAddCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCus.Location = new System.Drawing.Point(642, 362);
-            this.btnAddCus.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddCus.Name = "btnAddCus";
-            this.btnAddCus.Size = new System.Drawing.Size(135, 53);
-            this.btnAddCus.TabIndex = 68;
-            this.btnAddCus.Text = "Thêm";
-            this.btnAddCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddCus.UseVisualStyleBackColor = false;
-            this.btnAddCus.Click += new System.EventHandler(this.btnEditCus_Click);
-            // 
-            // btnEditCus
-            // 
-            this.btnEditCus.AutoSize = true;
-            this.btnEditCus.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnEditCus.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEditCus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.btnEditCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditCus.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditCus.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnEditCus.Image = ((System.Drawing.Image)(resources.GetObject("btnEditCus.Image")));
-            this.btnEditCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditCus.Location = new System.Drawing.Point(448, 362);
-            this.btnEditCus.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditCus.Name = "btnEditCus";
-            this.btnEditCus.Size = new System.Drawing.Size(170, 53);
-            this.btnEditCus.TabIndex = 67;
-            this.btnEditCus.Text = "Cập nhật";
-            this.btnEditCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditCus.UseVisualStyleBackColor = false;
-            this.btnEditCus.Click += new System.EventHandler(this.btnEditCus_Click);
+            this.insert.AutoSize = true;
+            this.insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.insert.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.insert.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
+            this.insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insert.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insert.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.insert.Image = ((System.Drawing.Image)(resources.GetObject("insert.Image")));
+            this.insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.insert.Location = new System.Drawing.Point(642, 362);
+            this.insert.Margin = new System.Windows.Forms.Padding(4);
+            this.insert.Name = "insert";
+            this.insert.Size = new System.Drawing.Size(135, 53);
+            this.insert.TabIndex = 68;
+            this.insert.Text = "Thêm";
+            this.insert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.insert.UseVisualStyleBackColor = false;
+            this.insert.Click += new System.EventHandler(this.btnEditCus_Click);
             // 
             // panelCusinfo
             // 
             this.panelCusinfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelCusinfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCusinfo.Controls.Add(this.txtEmail);
+            this.panelCusinfo.Controls.Add(this.label2);
             this.panelCusinfo.Controls.Add(this.label13);
             this.panelCusinfo.Controls.Add(this.txtCusAddress);
             this.panelCusinfo.Controls.Add(this.label12);
@@ -113,6 +95,31 @@ namespace CoffeeStoreApp
             this.panelCusinfo.Name = "panelCusinfo";
             this.panelCusinfo.Size = new System.Drawing.Size(933, 177);
             this.panelCusinfo.TabIndex = 65;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmail.Location = new System.Drawing.Point(643, 75);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(243, 22);
+            this.txtEmail.TabIndex = 40;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label2.Location = new System.Drawing.Point(483, 78);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 20);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Email:";
             // 
             // label13
             // 
@@ -158,7 +165,7 @@ namespace CoffeeStoreApp
             this.txtCusName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCusName.Location = new System.Drawing.Point(643, 25);
+            this.txtCusName.Location = new System.Drawing.Point(649, 27);
             this.txtCusName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCusName.Name = "txtCusName";
             this.txtCusName.Size = new System.Drawing.Size(233, 22);
@@ -254,8 +261,7 @@ namespace CoffeeStoreApp
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1016, 504);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAddCus);
-            this.Controls.Add(this.btnEditCus);
+            this.Controls.Add(this.insert);
             this.Controls.Add(this.panelCusinfo);
             this.Controls.Add(this.txtCusId);
             this.Controls.Add(this.label27);
@@ -273,8 +279,7 @@ namespace CoffeeStoreApp
         #endregion
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAddCus;
-        private System.Windows.Forms.Button btnEditCus;
+        private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Panel panelCusinfo;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtCusAddress;
@@ -286,5 +291,7 @@ namespace CoffeeStoreApp
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtCusId;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label2;
     }
 }

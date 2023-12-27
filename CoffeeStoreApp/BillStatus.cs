@@ -14,11 +14,16 @@ namespace CoffeeStoreApp
     {
         public HOADON hd { get; set; }
         public List<CartDTO> cfs { get; set; } = new List<CartDTO>();
+        public double moneyRecieve { get; set; }
+        public double change { get; set; }
         public KHACHHANG kh { get; set; }
-        public BillStatus(HOADON hd,KHACHHANG kh, List<CartDTO> cfs)
+        Data d = new Data();
+        public BillStatus(HOADON hd, KHACHHANG kh, List<CartDTO> cfs, double change, double moneyRecieve)
         {
             this.hd = hd;
             this.kh = kh;
+            this.change = change;
+            this.moneyRecieve = moneyRecieve;
             this.cfs = cfs;
             InitializeComponent();
         }
@@ -27,12 +32,15 @@ namespace CoffeeStoreApp
         {
             foreach(var cf in cfs)
             {
-                txtProductList.Text += $"{cf.ten}x{cf.soluong}\n";
+                txtProductList.Text += $"{cf.ten} x {cf.soluong}\n";
             }
             int score = hd.tongtien > 200000 ? 20 : hd.tongtien < 100000 ? 10 : 5;
             txtScore.Text = $"{kh.diemtichluy} + {score}";
-            txtStaffName.Text = hd.NHANVIEN.tennv;
-            txtTable.Text = hd.BAN.tenban + " - " + hd.BAN.KHUVUC.tenkv;
+            txtStaffName.Text = d.db.NHANVIENs.Where(itm => itm.manv == hd.manv).Select(itm => itm.tennv).First();
+            if (hd.maban != null)
+                txtTable.Text = d.db.BANs.Where(i => i.maban == hd.maban).Select(i => i.tenban).First();
+            tenkh.Text = kh.tenkh;
+            dateSet.Text = hd.ngaylap.ToString();
             txtTotal.Text = hd.tongtien.ToString();
             txtBillCode.Text = hd.mahd;
         }
@@ -40,6 +48,12 @@ namespace CoffeeStoreApp
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintBill print = new PrintBill(hd, kh, cfs, moneyRecieve,change);
+            print.ShowDialog();
         }
     }
 }

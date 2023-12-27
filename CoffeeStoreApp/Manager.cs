@@ -28,7 +28,7 @@ namespace CoffeeStoreApp
         private void ActiveButton(object sender)
         {
             if (currentButton != null)
-                currentButton.BackColor = Color.Red;
+                currentButton.BackColor = Color.FromArgb(128, 64, 0);
             Button btn = sender as Button;
             currentButton = btn;
             btn.BackColor = Color.Chocolate;
@@ -46,18 +46,10 @@ namespace CoffeeStoreApp
             childForm.Dock = DockStyle.Fill;
             this.mainPanel.Controls.Add(childForm);
             this.Height += childForm.Height - this.mainPanel.Height;
+            this.Width += childForm.Width - this.mainPanel.Width;
             this.mainPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-        }
-        private void btnView_Click(object sender, EventArgs e)
-        {
-            string btnFunction = (sender as Button).Name;
-            switch (btnFunction)
-            {
-                case "btnView":
-                    break;
-            }
         }
 
         private void btnNV_Click(object sender, EventArgs e)
@@ -74,10 +66,8 @@ namespace CoffeeStoreApp
                     OpenChildForm(kh, sender);
                     break;
                 case "btnSP":
-
-                    break;
-                case "btnReport":
-
+                    SanPham sp = new SanPham();
+                    OpenChildForm(sp, sender);
                     break;
                 case "btnImport":
                     ManageStorage storage = new ManageStorage();
@@ -87,8 +77,9 @@ namespace CoffeeStoreApp
                     var result = MessageBox.Show("Bạn có muốn kết ca", "Thông báo");
                     if (result == DialogResult.OK)
                     {
-
                         this.Close();
+                        Login l = new Login();
+                        l.Show();
                     }
                     break;
 
@@ -102,7 +93,7 @@ namespace CoffeeStoreApp
 
         private void Manager_Load(object sender, EventArgs e)
         {
-
+            label1.Text = _nv.manv;
         }
     }
 }
